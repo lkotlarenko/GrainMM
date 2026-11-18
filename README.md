@@ -15,13 +15,13 @@ The example filename is illustrative; samples are not included.*
 ## Status
 
 **Early alpha. No public download yet.**
-This repository currently publishes documentation. The native source is being
-kept private while the first version is developed and tested. Granular
+This repository publishes documentation. Native source and app downloads are
+being kept private while development and testing continue. Granular
 playback, sample browsing, synthesis, EQ, compression, delay, reverb and tape-style
 coloration work on a real Miyoo Mini Plus. Controls, clean short listening,
 save/reopen and normal exit have been checked on the device.
 This version does not yet include all GrainBrick features. Recording, MIDI,
-shimmer, resonators and other features are still to come.
+shimmer, layered projects and other features are still to come.
 
 Tested system: **Miyoo Mini Plus · OnionOS 4.3.1-1**. Other models are untested.
 
@@ -78,6 +78,9 @@ To use your own sound:
 | **X** | Next control page |
 | **L / R** | Previous / next control page |
 | **Y** | Open the sample browser; playback pauses |
+| **START** | Open patch slots |
+| **B** | Waveform with a loaded WAV; back in dialogs |
+| **SELECT** | Help for the current page |
 | **MENU** | Save and exit to Onion |
 
 In the browser, **A** opens a folder or loads a sound, **B** goes back,
@@ -98,7 +101,7 @@ triangle, saw or pulse. **MIDI NOTE 57** is A 3; **69** is A 4.
 
 *Actual host-rendered interface, shown paused.*
 
-The pages are **GRAIN · DELAY · EQ · REVERB · MOTION · OSC · COMP · TAPE**.
+The pages are **GRAIN · DELAY · EQ · REVERB · MOTION · OSC · COMP · TAPE · RESONATE · RHYTHM · SAMPLE**.
 Use **L/R** to move between them. The oscillator can also play alongside a WAV.
 **COMP** controls compression; start with MIX 0 and raise it gradually. Lower
 GRAIN/GAIN before large EQ boosts or makeup gain. The quiet test tone at OSC/LEVEL 0
@@ -111,9 +114,31 @@ Open **TAPE** with L/R. Start with **MIX 0.50**, **DRIVE DB 6** and
 movement, and FLUTTER adds faster movement. Set MIX to zero for the original sound.
 This works with a WAV or the built-in synth; the quiet fallback test tone bypasses effects.
 
+## More sound tools
+
+- **RESONATE** adds tuned ringing. Start with MIX0.4 and match MIDI NOTE to your synth.
+- **RHYTHM** adds pulsing and stereo movement. Try TREMOLO0.6 at TEMPO120.
+- **SAMPLE** trims the playback region without changing your WAV. Raise ENV BLEND
+  to use its ATTACK and RELEASE controls. These affect new grains.
+- **SELECT** opens help. A can still stop/play audio; B or SELECT closes help.
+
+The effects and sample controls have passed device listening and save/reopen
+checks. Longer reliability testing remains.
+
+## Patches and visual trim in alpha10
+
+Press **START** for16patch slots. **X** saves your sound, **A** loads, and **Y**
+chooses a name for the next save. To replace a patch, release X and press it again.
+**B/START** closes the menu; patch browsing pauses audio.
+
+With a WAV loaded, press **B** for the waveform. Use the D-pad to select and edit
+sample trim/window controls; **A** plays/pauses, **B** returns. Your WAV stays intact.
+These alpha10 additions are being tested. See the [sound guide](docs/PARAMETERS.md).
+
 ## Help
 
 - [Installation, updates and backups](docs/INSTALLATION.md)
+- [Sounds, patches and waveform guide](docs/PARAMETERS.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 - [Report a problem](https://github.com/lkotlarenko/GrainMM/issues)
 
@@ -124,8 +149,8 @@ This works with a WAV or the built-in synth; the quiet fallback test tone bypass
 **Original GrainBrick by [ETRNLIAM](https://github.com/ETRNLIAM).**
 Porting and distribution permission granted with attribution.
 
-Newly authored documentation uses the [scoped MIT license](LICENSE_SCOPE.md).
-Original GrainBrick and third-party materials retain their own terms.
+New GrainMM code uses the [GPLv3 license](LICENSES/GPL-3.0-only.txt);
+[upstream and third-party terms remain separate](LICENSE_SCOPE.md).
 See [credits](docs/CREDITS.md) for authorship, references and acknowledgements.
-Source, build instructions and engineering notes will be published when ready.
-For now, follow development here and report issues or ideas through GitHub.
+Source and engineering notes will be published when ready. For now, follow
+development here and report issues or ideas through GitHub.

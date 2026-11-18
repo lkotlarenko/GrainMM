@@ -26,7 +26,7 @@ Delay is initially dry: raise its MIX control to hear echoes.
 
 The built-in source at OSC/LEVEL0 is the quiet test tone and bypasses effects.
 Raise OSC/LEVEL to0.05 for musical synthesis, then press A. Loading a WAV or
-closing the browser always returns paused. GRAIN/MOTION require a WAV; other pages
+closing the browser always returns paused. GRAIN/MOTION/SAMPLE require a WAV; other pages
 can process the musical oscillator. Compression can reduce volume substantially;
 start with COMP/MIX0 and modest EQ/gain settings.
 
@@ -34,7 +34,7 @@ start with COMP/MIX0 and modest EQ/gain settings.
 
 Place your own short **16-bit PCM WAV** in `App/GrainMM/state/` or a subfolder.
 Use **Y** to browse, **A** to open/load and **B** to go back. MP3, 24-bit and float
-WAV are unsupported. Use mono/stereo PCM16 at8–96kHz; decoded audio is limited to16MiB.
+WAV are unsupported. Check [format and size limits](PARAMETERS.md).
 Hidden files, links and non-WAV files are not listed. Split a large sample folder
 into smaller subfolders if GrainMM reports a listing limit.
 
@@ -48,11 +48,37 @@ test tone without deleting any files.
 Use **MENU** to save and exit; power interruption can lose unsaved edits.
 If a saved file is malformed, GrainMM reports an error and preserves it. With the
 app closed and the SD card on your computer, back up the entire `state` folder.
-Move `parameters.v7` into that backup to use older v6/v5/v4/v3/v2/v1 settings. Move all seven
+Move `parameters.v8` into that backup to use older v7/v6/v5/v4/v3/v2/v1 settings. Move all eight
 versioned files into backup to start with defaults. Your WAVs are independent.
 
-An interrupted save may leave `parameters.v7.pending` (or an older version's
+An interrupted save may leave `parameters.v8.pending` (or an older version's
 pending file). The previous committed settings remain usable. Move the pending
 file into backup before saving again. GrainMM never promotes or deletes it
 automatically. Check available SD space if saves keep failing.
 
+## New effects seem to do nothing
+
+RESONATE starts with MIX0; raise MIX gradually and try a harmonically rich WAV or
+saw oscillator. RHYTHM starts with both TREMOLO and AUTO PAN0; raise either depth.
+The safe fallback test tone bypasses the effects. SAMPLE applies only to WAVs.
+ATTACK/RELEASE shape new grains when ENV BLEND is above0; old grains finish first.
+SELECT opens contextual help. MENU always exits, including from help or the browser.
+
+## A patch cannot save or load
+
+Use START to open patches, Y to choose a draft name and X to save the current
+sound. For an occupied slot, release and press X again to confirm. A loads a
+saved patch and returns paused; B/START closes the dialog. Save settings with
+MENU separately. An unsaved name is only a draft, not a renamed file.
+
+A missing/invalid WAV leaves the previous sound intact. Restore the WAV at its
+saved relative path or load another patch. A failed patch save preserves the
+old committed file and may leave `state/patches/patch-NN.gmm.pending`. Back up
+state, then move that pending file aside before retrying; do not delete it blindly.
+
+## The waveform looks flat or does not follow effects
+
+The view shows cached input peaks. It does not visualize processed output.
+Silent/very short files may look flat. The bright region is selected. Use up/down
+to select START/END or another SAMPLE control, then left/right to change it.
+The source is scanned once when loaded; audio keeps running while trim is edited.

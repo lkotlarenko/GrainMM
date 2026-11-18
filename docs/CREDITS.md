@@ -7,8 +7,8 @@
 GrainMM's instrument design, native C++ implementation, Miyoo Mini Plus adaptation,
 interface, build/release tooling and testing are developed in this project, with
 AI-assisted engineering. It is an independently written instrument rather than a
-rebuild of GrainBrick's supplied native libraries. The newly authored documentation uses the scoped
-[MIT license](../LICENSE_SCOPE.md); native source publication is planned.
+rebuild of GrainBrick's supplied native libraries. The new work uses the scoped
+[GPLv3 license](../LICENSE_SCOPE.md).
 
 ## Original project
 
@@ -27,7 +27,12 @@ third-party components retain their separate terms.
 | [Miyoo toolchain](https://github.com/shauninman/miyoomini-toolchain-buildroot) | Pinned ARM compiler/SDK used to build the app |
 | [PocketTracker](https://github.com/conanizer/pockettracker), by conanizer and contributors | Credits organization and research into handheld effect bypass/lifecycle patterns; no code or assets included |
 
-System libraries are dynamically used by the app, not bundled. Research
-acknowledgements do not mean those projects authored or endorse GrainMM.
-No PocketTracker code or assets are included. Original components keep their own
-terms; future borrowed code must retain the authors' notices and applicable license.
+System libraries are dynamically used, not bundled. Research acknowledgements do
+not mean those projects authored or endorse GrainMM. No PocketTracker code or
+assets are included. Borrowed components retain their authors and license notices.
+
+## Algorithm references
+
+The original resonator implementation uses the constant-peak-gain filter form
+explained by Julius O. Smith in [Introduction to Digital Filters](https://www.dsprelated.com/freebooks/filters/Constant_Peak_Gain_Resonator.html).
+This is a mathematical reference, not imported library code. The DSP implementation is independently authored in GrainMM.

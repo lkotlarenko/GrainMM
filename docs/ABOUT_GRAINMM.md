@@ -32,7 +32,8 @@ The initial audit and detailed hardware findings will accompany source publicati
 ## What we built for GrainMM
 
 - A native C++17 audio engine with granular playback, a playable oscillator,
-  EQ, compression, stereo delay, reverb and tape-style coloration. DSP modules
+  EQ, compression, stereo delay, reverb, tape-style coloration, tuned resonance
+  and rhythmic modulation. DSP modules
   are independently authored; the app does not load GrainBrick's native libraries.
 - A direct 640×480 interface for the Miyoo's D-pad and buttons, with six controls
   per page, sample folders, silent startup, play/pause and normal MENU exit.
@@ -61,7 +62,7 @@ New performance findings continue to shape implementation choices.
 | Sound | Practical musical equivalents; related features need not sound identical |
 | Interface | Compact button-operated parameter pages rather than the original desktop-sized layout |
 | Files | Own WAV browser and versioned settings; no claim of GrainBrick project compatibility |
-| Features | Smaller working set today; recording, MIDI, shimmer, resonators and other features remain in development |
+| Features | Smaller working set today; recording, MIDI, shimmer, additional resonator types and other features remain in development |
 | Distribution | Small app package using the device's runtime; no included GrainBrick samples or libraries |
 
 Working native features do not mean full parity or a stable release. Current
@@ -81,6 +82,6 @@ modulation, followed by better sample/project tools and longer reliability tests
 GrainMM's design, native implementation and Miyoo adaptation are elly's project.
 ETRNLIAM retains credit for the original GrainBrick project and inspiration.
 These roles deserve clear, separate attribution. See [credits](CREDITS.md).
-New GrainMM source is planned for publication under scoped MIT terms; upstream and third-party materials keep
+New GrainMM source uses scoped GPLv3 terms; upstream and third-party materials keep
 their own licenses. Permission to adapt GrainBrick does not relabel those materials
 as newly authored GrainMM code.

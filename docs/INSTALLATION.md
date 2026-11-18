@@ -34,9 +34,24 @@ For no-WAV synthesis, press Y then X to choose the built-in source. OSC opens;
 raise LEVEL to0.05 and press A. NOTE chooses pitch, WAVE chooses the sound shape.
 The quiet test tone stays available at LEVEL0. L/R move between pages.
 
-**X** cycles GRAIN/DELAY/EQ/REVERB/MOTION/OSC/COMP/TAPE controls. **↑/↓** select a parameter; **←/→** change it. Values save when you exit normally
+**X** cycles GRAIN/DELAY/EQ/REVERB/MOTION/OSC/COMP/TAPE/RESONATE/RHYTHM/SAMPLE controls. **↑/↓** select a parameter; **←/→** change it. Values save when you exit normally
 with MENU and restore next launch. Playback always starts silent. GrainMM does
 not load original GrainBrick projects or save recordings yet.
+
+Press **SELECT** for help on the current page. Help keeps audio running; **A**
+can still pause/play, **B** or **SELECT** closes help, and **MENU** saves/exits.
+
+## Patches and waveform
+
+Press START for16named patch slots. Up/down chooses a slot; X saves, A loads,
+and Y edits the name for the next save. Occupied slots require a second X press
+to confirm replacement. B/START closes the paused dialog. MENU saves ordinary
+settings and exits; an unsaved patch-name draft is not committed.
+
+With a WAV loaded, B outside the browser opens waveform trim. Up/down selects
+a SAMPLE control, left/right edits it, A plays/pauses, B returns. The WAV is unchanged.
+See the [sound guide](PARAMETERS.md) for details. Back up the entire state folder,
+including state/patches; patch files reference your WAVs rather than copying them.
 
 ## Update without losing your sounds
 
@@ -53,8 +68,8 @@ not load original GrainBrick projects or save recordings yet.
 ## Where your files live
 
 Everything stays in `App/GrainMM`. Your WAVs/folders in `state` are input sounds;
-`state/parameters.v7` holds controls and the sound selection. Older
-`state/parameters.v1`, `.v2`, `.v3`, `.v4`, `.v5` and `.v6` are read when newer versions are absent and stay
+`state/parameters.v8` holds controls and the sound selection. Older
+`state/parameters.v1`, `.v2`, `.v3`, `.v4`, `.v5`, `.v6` and `.v7` are read when newer versions are absent and stay
 preserved for rollback. `state/session.log` and
 `state/session.previous.log` hold the last two startup/exit reports. Parameter
 writes happen only after edits and normal exit, after audio has stopped.
