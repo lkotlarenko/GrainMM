@@ -17,12 +17,9 @@ The example filename is illustrative; samples are not included.*
 **Early alpha. No public download yet.**
 This repository currently publishes documentation. The native source is being
 kept private while the first version is developed and tested. Granular
-playback, delay, controls and saved settings work on a real Miyoo Mini Plus.
-Recent builds add EQ, reverb, grain motion, a playable oscillator and compression,
-including synthesis without a sample. These have been checked on the Miyoo.
-The newest tape-style effect has native automated checks; listening acceptance
-is tracked separately.
-Sample browsing and the six-control interface also passed testing on the Miyoo.
+playback, sample browsing, synthesis, EQ, compression, delay, reverb and tape-style
+coloration work on a real Miyoo Mini Plus. Controls, clean short listening,
+save/reopen and normal exit have been checked on the device.
 This version does not yet include all GrainBrick features. Recording, MIDI,
 shimmer, resonators and other features are still to come.
 
@@ -30,8 +27,8 @@ Tested system: **Miyoo Mini Plus · OnionOS 4.3.1-1**. Other models are untested
 
 ## Why a native version?
 
-GrainBrick's supplied DSP libraries target a different,64-bit ARM device. The
-Miyoo runs32-bit ARM with128MiB RAM, so copying the original app could not make
+GrainBrick's supplied DSP libraries target a different, 64-bit ARM device. The
+Miyoo runs 32-bit ARM with 128MiB RAM, so copying the original app could not make
 it work. We built a new C++ audio engine, button-driven interface and OnionOS
 adapters for this hardware. GrainMM aims for good sound and useful feature
 coverage; it does not promise identical DSP or compatible GrainBrick projects.
@@ -95,7 +92,7 @@ timing variation, stereo spread and sample scanning. Lower GRAIN/GAIN before lar
 
 Press **Y**, then **X** for the built-in source. On the **OSC** page, raise
 **LEVEL** to about **0.05**, then press **A**. Select **WAVE** to try sine,
-triangle, saw or pulse. **MIDI NOTE 57** is A3; **69** is A4.
+triangle, saw or pulse. **MIDI NOTE 57** is A 3; **69** is A 4.
 
 ![Built-in synth controls](docs/images/builtin-synth.png)
 
@@ -103,8 +100,8 @@ triangle, saw or pulse. **MIDI NOTE 57** is A3; **69** is A4.
 
 The pages are **GRAIN · DELAY · EQ · REVERB · MOTION · OSC · COMP · TAPE**.
 Use **L/R** to move between them. The oscillator can also play alongside a WAV.
-**COMP** controls compression; start with MIX0 and raise it gradually. Lower
-GRAIN/GAIN before large EQ boosts or makeup gain. The quiet test tone at OSC/LEVEL0
+**COMP** controls compression; start with MIX 0 and raise it gradually. Lower
+GRAIN/GAIN before large EQ boosts or makeup gain. The quiet test tone at OSC/LEVEL 0
 bypasses effects; raise LEVEL for synthesis through the rack.
 
 ## Tape-style sound

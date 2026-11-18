@@ -12,18 +12,18 @@ GrainBrick's code, screen layouts or audio output exactly.
 ## Why this needed more than a simple port
 
 The supplied GrainBrick release was built for a different machine. Its core DSP
-libraries are mostly64-bit AArch64 binaries. The Miyoo Mini Plus runs32-bit ARMv7;
+libraries are mostly 64-bit AArch 64 binaries. The Miyoo Mini Plus runs 32-bit ARMv 7;
 those binaries cannot run there. Native source for the main supplied DSP modules
 was not present in the reference release, so changing a compiler setting could
 not rebuild them for the Miyoo.
 
 The application also depends on a Python/Pygame/NumPy environment and supporting
 programs. Its bundled NumPy and runtime binaries target the other architecture.
-Putting that whole environment on a128MiB handheld would still leave the missing
+Putting that whole environment on a 128MiB handheld would still leave the missing
 DSP implementations and require its own memory/performance investigation.
 
-The screen, controls and operating system differ too. GrainBrick's1024×768 logical
-interface does not fit the Miyoo's640×480 screen directly. Onion's audio routing,
+The screen, controls and operating system differ too. GrainBrick's 1024×768 logical
+interface does not fit the Miyoo's 640×480 screen directly. Onion's audio routing,
 launch process, display rotation and buttons needed real-device investigation.
 Moving the original files onto the SD card could not resolve those differences.
 
@@ -34,7 +34,7 @@ The initial audit and detailed hardware findings will accompany source publicati
 - A native C++17 audio engine with granular playback, a playable oscillator,
   EQ, compression, stereo delay, reverb and tape-style coloration. DSP modules
   are independently authored; the app does not load GrainBrick's native libraries.
-- A direct640×480 interface for the Miyoo's D-pad and buttons, with six controls
+- A direct 640×480 interface for the Miyoo's D-pad and buttons, with six controls
   per page, sample folders, silent startup, play/pause and normal MENU exit.
 - A bounded audio path with preallocated storage and prepared parameter updates.
   File loading, saving, drawing and coefficient preparation stay outside audio.

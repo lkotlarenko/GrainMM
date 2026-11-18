@@ -23,7 +23,7 @@ third-party components retain their separate terms.
 | Project | Role in GrainMM |
 | --- | --- |
 | [OnionOS](https://github.com/OnionUI/Onion) | Target environment and device-provided runtime |
-| [SDL](https://www.libsdl.org/) | Device SDL1.2 / host SDL2 audio, graphics and controls |
+| [SDL](https://www.libsdl.org/) | Device SDL 1.2 / host SDL 2 audio, graphics and controls |
 | [Miyoo toolchain](https://github.com/shauninman/miyoomini-toolchain-buildroot) | Pinned ARM compiler/SDK used to build the app |
 | [PocketTracker](https://github.com/conanizer/pockettracker), by conanizer and contributors | Credits organization and research into handheld effect bypass/lifecycle patterns; no code or assets included |
 
