@@ -40,6 +40,9 @@ Dated research, ADRs and development notes retain historical context.
   public tag; USER_GUIDE.md and the flattened license files retain working links.
 - Render release-note links and images against the exact tag so GitHub Releases
   displays them correctly. Keep GPL source notice consistent with public metadata.
+- Resolve GCC13's sanitizer-build maybe-uninitialized diagnostic for a conditional
+  array selection in the lifecycle probe by indexing the two arrays in explicit
+  mode branches. Keep warnings-as-errors and all sanitizers enabled.
 - Lint prepared workflows and verify pinned Actions/SDK references. Enable bug
   reporting in the public repository to match documented support links.
 

@@ -253,8 +253,11 @@ void LifecycleProbe::inject(unsigned elapsed_ms) {
     } else if (mode_ == ProbeMode::Library) {
         key = library_keys[stage_ / 2];
         key_up = stage_ % 2 == 1;
-    } else if (mode_ == ProbeMode::Rack || mode_ == ProbeMode::Sample) {
-        key = (mode_ == ProbeMode::Rack ? rack : sample)[stage_ / 2];
+    } else if (mode_ == ProbeMode::Rack) {
+        key = rack[stage_ / 2];
+        key_up = stage_ % 2 == 1;
+    } else if (mode_ == ProbeMode::Sample) {
+        key = sample[stage_ / 2];
         key_up = stage_ % 2 == 1;
     } else {
         key = keys[stage_];
