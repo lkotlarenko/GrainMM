@@ -25,14 +25,19 @@ third-party components retain their separate terms.
 | [OnionOS](https://github.com/OnionUI/Onion) | Target environment and device-provided runtime |
 | [SDL](https://www.libsdl.org/) | Device SDL 1.2 / host SDL 2 audio, graphics and controls |
 | [Miyoo toolchain](https://github.com/shauninman/miyoomini-toolchain-buildroot) | Pinned ARM compiler/SDK used to build the app |
+| [MIASMORA](https://github.com/oldtokage-collab/MIASMORA), by Tokagetchi | Owner-supplied behavior reference for a self-running ambient instrument; no code/assets/presets included |
 | [PocketTracker](https://github.com/conanizer/pockettracker), by conanizer and contributors | Credits organization and research into handheld effect bypass/lifecycle patterns; no code or assets included |
 
 System libraries are dynamically used, not bundled. Research acknowledgements do
-not mean those projects authored or endorse GrainMM. No PocketTracker code or
-assets are included. Borrowed components retain their authors and license notices.
+not mean those projects authored or endorse GrainMM. Exact component usage and
+terms are recorded in [legal and provenance](LEGAL_AND_PROVENANCE.md).
+Algorithm references and implementation tradeoffs belong in the [architecture
+records](adr). Contributions should be credited by their actual role; borrowed
+code must retain its authors' notices and applicable license.
 
 ## Algorithm references
 
 The original resonator implementation uses the constant-peak-gain filter form
 explained by Julius O. Smith in [Introduction to Digital Filters](https://www.dsprelated.com/freebooks/filters/Constant_Peak_Gain_Resonator.html).
-This is a mathematical reference, not imported library code. The DSP implementation is independently authored in GrainMM.
+This is a mathematical reference, not imported library code. Implementation and
+quality/cost decisions are recorded in ADR0011.

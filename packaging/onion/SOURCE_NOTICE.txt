@@ -1,0 +1,14 @@
+GrainMM — GPL-3.0-only from alpha10
+Copyright2026 GrainMM contributors. Created and maintained by elly (@lkotlarenko).
+Original GrainBrick by ETRNLIAM; original and third-party terms remain separate.
+
+This program is free software under GNU GPL version3 only. It comes without
+warranty; see GPL-3.0-only.txt for the complete terms. Earlier MIT grants and
+notices remain valid; GrainMM-MIT.txt preserves that notice.
+
+For a public release, the matching GrainMM-<version>-source.tar.gz and its SHA256
+are supplied with the installation ZIP at https://github.com/lkotlarenko/GrainMM/releases .
+That archive contains reviewed source, build/package scripts and documentation.
+The pinned compiler SDK is a documented external build input, not bundled here.
+
+<distribution_notice>

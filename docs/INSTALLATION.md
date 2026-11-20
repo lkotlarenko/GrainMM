@@ -1,84 +1,70 @@
-# Install GrainMM on a Miyoo Mini Plus
+# Install, update and back up
 
-GrainMM is an early native sound instrument for **Miyoo Mini Plus with OnionOS**.
-The verified test device runs OnionOS 4.3.1-1. Other models/versions are untested.
-No firmware update, system-library replacement or terminal commands are needed.
+GrainMM targets **Miyoo Mini Plus with OnionOS**. The accepted test device runs
+OnionOS 4.3.1-1. Other models/versions are untested. The1.0milestone is an
+**experimental prerelease**, not a stable release. Read the release notes and
+back up your app/state before installing.
 
 ## First installation
 
-1. Open [Releases](https://github.com/lkotlarenko/GrainMM/releases). Download
-   **GrainMM-…-miyoo-mini-plus.zip** from **Assets**. Do not download the Source
-   code archives. If there is no release yet, the first one is still being prepared.
-2. Turn off the Miyoo safely and put its SD card into your computer.
-3. If `App/GrainMM` already exists, follow the update steps below first.
-4. Extract the ZIP onto the SD card. Check that the path is exactly
-   `App/GrainMM/config.json`, alongside `launch.sh`, `icon.png` and `grainmm`.
-   Avoid an extra enclosing `GrainMM-version` or second `App` folder.
-5. Safely eject the card and put it back. Turn on the Miyoo and open **Apps → GrainMM**.
+1. Download **GrainMM-…-miyoo-mini-plus.zip** from [Releases](https://github.com/lkotlarenko/GrainMM/releases), under Assets. The source archives are for developers, not installation.
+2. Turn off the Miyoo and put its SD card into your computer.
+3. If `App/GrainMM` already exists, follow the update instructions below first.
+4. Extract the ZIP onto the card. Check for **App/GrainMM/config.json**, with `launch.sh`, `icon.png` and `grainmm` beside it. Avoid an extra enclosing folder or a second App folder.
+5. Safely eject the card, put it back and open **Apps → GrainMM**.
 
-## First sound
+No terminal commands, firmware changes or system-library replacements are needed.
 
-GrainMM starts silent. Set listening volume low, then press **A** to play the
-quiet test tone. Press **A** again to pause; **MENU** exits back to Onion.
+## First sound and samples
 
-For granular audio, put a short **16-bit PCM WAV** you own at
-`App/GrainMM/state/` on the SD card. Press **Y** to browse, **↑/↓** to choose,
-**A** to open/load and **B** to go back. Subfolders are supported. Press **A**
-again after loading to play. The selected sound restores next time. Older
-settings still use `state/sample.wav` as a default. Create the
-`state` folder if this is your first launch. Mono/stereo, 8–96kHz are accepted;
-use short samples (decoded limit 16MiB, roughly 44 seconds stereo at 48kHz).
-MP3, float WAV and 24-bit WAV are unsupported. The original sample is never edited.
+Start at low listening volume. GrainMM opens paused. A plays/pauses the gentle
+test tone; MENU saves and exits. For sample playback, create
+`App/GrainMM/state/WAV/` on your computer, copy in your own short **16-bit PCM WAV**,
+then use Y → WAV → file → A. Press A again after loading to play.
 
-For no-WAV synthesis, press Y then X to choose the built-in source. OSC opens;
-raise LEVEL to0.05 and press A. NOTE chooses pitch, WAVE chooses the sound shape.
-The quiet test tone stays available at LEVEL0. L/R move between pages.
-
-**X** cycles GRAIN/DELAY/EQ/REVERB/MOTION/OSC/COMP/TAPE/RESONATE/RHYTHM/SAMPLE controls. **↑/↓** select a parameter; **←/→** change it. Values save when you exit normally
-with MENU and restore next launch. Playback always starts silent. GrainMM does
-not load original GrainBrick projects or save recordings yet.
-
-Press **SELECT** for help on the current page. Help keeps audio running; **A**
-can still pause/play, **B** or **SELECT** closes help, and **MENU** saves/exits.
-
-## Patches and waveform
-
-Press START for16named patch slots. Up/down chooses a slot; X saves, A loads,
-and Y edits the name for the next save. Occupied slots require a second X press
-to confirm replacement. B/START closes the paused dialog. MENU saves ordinary
-settings and exits; an unsaved patch-name draft is not committed.
-
-With a WAV loaded, B outside the browser opens waveform trim. Up/down selects
-a SAMPLE control, left/right edits it, A plays/pauses, B returns. The WAV is unchanged.
-See the [sound guide](PARAMETERS.md) for details. Back up the entire state folder,
-including state/patches; patch files reference your WAVs rather than copying them.
+Mono/stereo, 8–96 kHz are supported, with a 16 MiB decoded limit. At 48 kHz this
+is about 43 seconds stereo or 87 seconds mono; use shorter files first. MP3,
+24-bit and float WAV are unsupported. Samples are never edited. With no samples,
+Y then X chooses built-in synthesis. Follow the [quick start](../README.md#your-first-sound)
+or [sound guide](PARAMETERS.md) for drones and oscillators.
 
 ## Update without losing your sounds
 
-1. Exit GrainMM, turn off the Miyoo and open its SD card on your computer.
-2. Back up the entire `App/GrainMM` folder somewhere safe on the computer.
-3. Move the old GrainMM folder off its original location on the card. Extract
-   the new ZIP onto the card to create a fresh `App/GrainMM`.
-4. Copy **only the old `state` folder** into the new GrainMM folder. This keeps
-   your sample and saved parameters. Do not copy old executables, launchers,
-   CURRENT/PREVIOUS selectors or `releases` folders over the fresh installation.
-5. Keep the backup until the new build works. To undo the update, restore the
-   complete backed-up folder while the device is off.
+1. Press MENU to exit. Turn off the Miyoo and open its SD card on your computer.
+2. Back up the **whole App/GrainMM folder** to your computer.
+3. Move the old app folder off its location on the card. Extract the new app ZIP to create a fresh `App/GrainMM`.
+4. Copy **only the old state folder** into the fresh app folder. Do not copy old executables, launchers, CURRENT/PREVIOUS selectors or releases folders over the new installation.
+5. Keep the backup until the new app loads your sounds and saves correctly.
 
-## Where your files live
+New settings are written to **parameters.v18**. Older v1–v17 files are retained.
+This protects the older settings file but does not version every owner file:
+replacing a named patch in a new build makes that patch unreadable by an older
+build. A full state backup is essential for a complete rollback.
 
-Everything stays in `App/GrainMM`. Your WAVs/folders in `state` are input sounds;
-`state/parameters.v8` holds controls and the sound selection. Older
-`state/parameters.v1`, `.v2`, `.v3`, `.v4`, `.v5`, `.v6` and `.v7` are read when newer versions are absent and stay
-preserved for rollback. `state/session.log` and
-`state/session.previous.log` hold the last two startup/exit reports. Parameter
-writes happen only after edits and normal exit, after audio has stopped.
+To undo an update, exit and power off, then restore the **complete backed-up app
+folder**, including its state. Do not mix new patch files into an older version.
+The same fresh-folder procedure applies to SSH-managed development installations.
 
-## If it does not open
+## Where everything lives
 
-Check the folder nesting, correct ZIP and target model first. See
-[Troubleshooting](TROUBLESHOOTING.md) and keep the two session logs before retrying.
-Do not change Onion system libraries or audio settings to work around an error.
+| Inside App/GrainMM | Contents |
+| --- | --- |
+| state/WAV/ | Suggested home for your samples; other folders beneath state also work |
+| state/exports/ | New numbered exported WAVs |
+| state/parameters.v18 | Current saved controls, sample selection and pattern |
+| state/parameters.v1 … v17 | Older settings, preserved for compatibility/rollback |
+| state/patches/ | 16 named patch slots; samples are referenced, not copied |
+| state/theme.v1 | Saved color preference |
+| state/session.log, state/session.previous.log | Last two launcher reports |
 
-To remove GrainMM, exit and turn off the device, back up `state`, then remove
-only the `App/GrainMM` folder using your computer's file manager.
+GrainMM creates its state folders as needed. Back up the whole state folder to
+retain samples, exports, settings, patches and colors together. MENU saves edited
+ordinary settings after audio stops. Sudden power loss does not save unsaved work.
+A missing/invalid sample remains selected until you explicitly choose another.
+
+## Remove GrainMM
+
+Exit, power off and back up state first. Remove only `App/GrainMM` with your
+computer's file manager. This also removes its samples/exports if you did not copy
+them out. Other apps do not need changing. For launch/save errors, see
+[troubleshooting](TROUBLESHOOTING.md).

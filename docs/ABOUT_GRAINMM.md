@@ -12,7 +12,7 @@ GrainBrick's code, screen layouts or audio output exactly.
 ## Why this needed more than a simple port
 
 The supplied GrainBrick release was built for a different machine. Its core DSP
-libraries are mostly 64-bit AArch 64 binaries. The Miyoo Mini Plus runs 32-bit ARMv 7;
+libraries are mostly 64-bit AArch64 binaries. The Miyoo Mini Plus runs 32-bit ARMv7;
 those binaries cannot run there. Native source for the main supplied DSP modules
 was not present in the reference release, so changing a compiler setting could
 not rebuild them for the Miyoo.
@@ -27,11 +27,13 @@ interface does not fit the Miyoo's 640×480 screen directly. Onion's audio routi
 launch process, display rotation and buttons needed real-device investigation.
 Moving the original files onto the SD card could not resolve those differences.
 
-The initial audit and detailed hardware findings will accompany source publication.
+See the [initial audit](AUDIT.md) and [verified hardware findings](development/MIYOO_HARDWARE.md)
+for the evidence behind these decisions.
 
 ## What we built for GrainMM
 
-- A native C++17 audio engine with granular playback, a playable oscillator,
+- A native C++17 audio engine with granular playback, dual oscillators, generated wavetable/sub color,
+  slice phrases/swing/accents, generative drones, collision sounds,
   EQ, compression, stereo delay, reverb, tape-style coloration, tuned resonance
   and rhythmic modulation. DSP modules
   are independently authored; the app does not load GrainBrick's native libraries.
@@ -66,7 +68,7 @@ New performance findings continue to shape implementation choices.
 | Distribution | Small app package using the device's runtime; no included GrainBrick samples or libraries |
 
 Working native features do not mean full parity or a stable release. Current
-acceptance and remaining gaps will accompany source publication.
+acceptance and remaining gaps are recorded in [development progress](PORTING_PROGRESS.md).
 A successful ARM build or silent test alone does not prove clean physical audio.
 
 ## Where development goes next
@@ -76,6 +78,8 @@ run focused checks, test on the device, collect listening feedback and keep a
 known-working rollback. Improve the sound and controls before adding complexity.
 Near-term work includes performance headroom, additional musical effects and
 modulation, followed by better sample/project tools and longer reliability tests.
+The [current roadmap](development/ROADMAP.md) separates implemented1.0features
+from remaining work.
 
 ## Credit and ownership
 

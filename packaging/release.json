@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0-alpha.1",
+  "stable_ready": false,
+  "acceptance_document": "docs/DEVICE_TEST.md",
+  "source_publication_authorized": true
+}

@@ -1,0 +1,27 @@
+GrainMM 1.0 development milestone — experimental alpha
+
+By elly (@lkotlarenko). Original GrainBrick by ETRNLIAM.
+Adapted with permission and attribution; independently written native engine.
+https://github.com/lkotlarenko/GrainMM
+https://github.com/ETRNLIAM/GrainBrick
+
+Miyoo Mini Plus + OnionOS. Starts PAUSED. Set listening volume low.
+A plays/pauses. MENU saves/exits. Y browses short16-bit PCM WAVs.
+D-pad chooses/edits controls. L/R changes pages. X opens grouped modules:
+SOURCE, FX, TEMPO, TOOLS. Continue down in SOURCE for bank2: OSC B/TIMBRE.
+SELECT helps. START opens16named patches. Hold START+SELECT, release, for reset.
+
+Sources: grains/slices, OSC + OSC B, wavetable/sub color, drones and bouncing balls.
+TIMBRE colors OSC A. GROOVE in TEMPO adds swing, length, rotation/order and accents
+only to WAV slices. PATTERN edits steps/cuts. TOOLS exports complete sound to WAV,
+manages patches/master output/colors. Export restarts the graph, not live recording.
+
+New saves: state/parameters.v18. Older1–17files remain. New patches need this build;
+back up the whole state folder before updating/rolling back. Samples stay unchanged.
+Exports: state/exports. Use5/15/30seconds for reloading;60seconds exceeds sample cap.
+
+Stock MM+ has no Bluetooth. No MIDI, USB audio, live input/recording or multitrack.
+No original GrainBrick project compatibility. New1.0features need device acceptance;
+long stress/headphone/power testing remains open. See included guides and notices.
+No system volume, CPU policy, firmware or Onion internals are changed.
+New GrainMM work GPL-3.0-only. Earlier MIT and third-party terms remain separate.

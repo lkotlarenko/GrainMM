@@ -1,156 +1,183 @@
+<div align="center">
+
 # GrainMM
 
-A granular synthesizer for **Miyoo Mini Plus running OnionOS**. Load a WAV, reshape it with granular playback, layer a built-in synthesizer, and add EQ, compression, tape-style coloration, delay and reverb.
-Control everything with the D-pad and buttons.
+### A little handheld. A whole world of sound.
 
-**Created and maintained by [elly (@lkotlarenko)](https://github.com/lkotlarenko).**
-An independently written native adaptation of
-[GrainBrick](https://github.com/ETRNLIAM/GrainBrick), by **ETRNLIAM**.
+**Granular textures · evolving drones · playful rhythms · pocket synthesis**
+
+For **Miyoo Mini Plus + OnionOS**
+
+[![Build and verify](https://github.com/lkotlarenko/GrainMM/actions/workflows/ci.yml/badge.svg)](https://github.com/lkotlarenko/GrainMM/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/lkotlarenko/GrainMM?include_prereleases&label=alpha)](https://github.com/lkotlarenko/GrainMM/releases)
+[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd4968)](LICENSE_SCOPE.md)
+
+[Get started](#your-first-sound) · [Install](docs/INSTALLATION.md) · [Sound guide](docs/PARAMETERS.md) · [Help](docs/TROUBLESHOOTING.md)
 
 ![GrainMM grain controls](docs/images/grain-controls.png)
 
-*Grain controls from an earlier build, captured with the actual host renderer.
-The example filename is illustrative; samples are not included.*
+*Current native interface rendered on the host. Synthetic example; samples are not bundled.*
 
-## Status
+</div>
 
-**Early alpha. No public download yet.**
-This repository publishes documentation. Native source and app downloads are
-being kept private while development and testing continue. Granular
-playback, sample browsing, synthesis, EQ, compression, delay, reverb and tape-style
-coloration work on a real Miyoo Mini Plus. Controls, clean short listening,
-save/reopen and normal exit have been checked on the device.
-This version does not yet include all GrainBrick features. Recording, MIDI,
-shimmer, layered projects and other features are still to come.
+GrainMM turns your Miyoo into a button-controlled sound instrument. Stretch a
+short WAV into a cloud of grains, build a chopped loop, let a drone unfold, or
+layer synthesizers and effects. No keyboard or music theory required.
 
-Tested system: **Miyoo Mini Plus · OnionOS 4.3.1-1**. Other models are untested.
+Made by **[elly (@lkotlarenko)](https://github.com/lkotlarenko)**, inspired by
+**[GrainBrick by ETRNLIAM](https://github.com/ETRNLIAM/GrainBrick)**, with permission
+and attribution. GrainMM has its own independently written native engine.
 
-## Why a native version?
+## Before you start
 
-GrainBrick's supplied DSP libraries target a different, 64-bit ARM device. The
-Miyoo runs 32-bit ARM with 128MiB RAM, so copying the original app could not make
-it work. We built a new C++ audio engine, button-driven interface and OnionOS
-adapters for this hardware. GrainMM aims for good sound and useful feature
-coverage; it does not promise identical DSP or compatible GrainBrick projects.
+**1.0.0-alpha.1 is an experimental prerelease.**
+[Download the Miyoo app ZIP](https://github.com/lkotlarenko/GrainMM/releases/tag/v1.0.0-alpha.1) · [Read the release notes](docs/releases/1.0.0-alpha.1.md)
+The 1.0 number marks a major feature milestone; this is still an experimental
+alpha. The accepted physical-device build is alpha25 on OnionOS 4.3.1-1. The new
+1.0 features need their own device validation before release.
 
-Read [the porting story and differences](docs/ABOUT_GRAINMM.md) for what we rebuilt,
-the hardware challenges and where the project is going.
+This targets the **Miyoo Mini Plus**, not the Mini, Flip or other handhelds.
+You need OnionOS, an SD card and your own short WAV files if you want to sample.
+Built-in synthesis works without samples. [Current testing status →](docs/PORTING_PROGRESS.md)
+
+## What can I make?
+
+| Play with… | Make… |
+| --- | --- |
+| **Granular sampler** | Ambient clouds, reversed textures, shimmering pitch patterns and moving soundscapes from a WAV |
+| **Slice sequencer** | Chopped loops with editable cuts, rests, reverse and per-step chance |
+| **Dual oscillators** ✦ | Layered tones, octaves, fifths and detuned sounds with separately tuned OSC and OSC B |
+| **Wavetable color** ✦ | Smooth blends between pure, hollow, bright and glassy spectra, with automatic movement |
+| **Sub oscillator** ✦ | A sine foundation one or two octaves below OSC |
+| **Groove controls** ✦ | Swing, 1–16-step phrases, rotation, reverse/bounce order and repeating accents |
+| **Generative drones** | Self-playing pads and melodic events, eight moods and eight starting scenes |
+| **Collision instrument** | Tuned notes from balls bouncing inside a bowl |
+| **Effects and master output** | Filters, EQ, tape color, digital grit, chorus, compression, rhythm, delay, reverb and optional limiting |
+| **Patches and WAV export** | Save sounds in 16 slots, recall an experiment, and render your sound to a new WAV |
+
+✦ New in the 1.0 development milestone. [Explore every control →](docs/PARAMETERS.md)
 
 ## Install
 
-1. Open [Releases](https://github.com/lkotlarenko/GrainMM/releases) and download
-   **GrainMM-…-miyoo-mini-plus.zip** under **Assets**. Choose the app ZIP,
-   not **Source code**. If there are no releases, a download is not available yet.
-2. Turn off your Miyoo and connect its SD card to your computer.
-3. Extract the ZIP onto the SD card. Check that `config.json` is at
-   **`App/GrainMM/config.json`**, without an extra folder around `App`.
-4. Safely eject the card, put it back, and open **Apps → GrainMM**.
+Install the experimental alpha:
 
-Already installed? Follow the [update guide](docs/INSTALLATION.md#update-without-losing-your-sounds)
-to keep your sounds and settings.
+1. Download **GrainMM-…-miyoo-mini-plus.zip** from [Releases](https://github.com/lkotlarenko/GrainMM/releases). Choose the app ZIP, not the source archive.
+2. Turn the Miyoo off and put its SD card into your computer.
+3. Extract onto the card. You should have **App/GrainMM/config.json**.
+4. Safely eject, put the card back and open **Apps → GrainMM**.
 
-## Play
+No terminal or firmware changes are needed. **Updating? Back up the whole app
+folder first.** New features still need device listening and long-session checks.
+[Full installation, update and rollback guide →](docs/INSTALLATION.md)
 
-GrainMM starts silent. Keep the listening volume low and press **A** to hear
-the built-in test tone. Press **A** again to pause.
+## Your first sound
 
-To use your own sound:
+GrainMM starts **paused**. Set the listening volume low. Press **A** for a gentle
+test tone, then **A** again to pause. You have sound!
 
-1. Copy a short **16-bit PCM WAV** into **`App/GrainMM/state/`** on the SD card.
-   Create `state` if it does not exist. You can organize sounds into subfolders.
-2. Open GrainMM and press **Y**. Choose a file with **↑/↓**, then press **A**
-   to load it. Use **A** to open a folder and **B** to go back.
-3. Press **A** again to play. Change the controls with the D-pad.
-4. Press **MENU** to save your settings and exit. The selected sound returns
-   next time, paused.
+**Try a sample:**
 
-![GrainMM sample browser](docs/images/sample-browser.png)
+1. Copy a short **16-bit PCM WAV** into **App/GrainMM/state/WAV/** on the SD card. Create the folders if needed.
+2. Open GrainMM. Press **Y**, choose WAV with **↑/↓**, then **A**.
+3. Choose your file and press **A** to load. Press **A** again to play.
+4. Try changing **SIZE MS**, **DENSITY HZ** and **POSITION** with the D-pad.
+5. Press **MENU** to save your settings and exit.
 
-*Sample browser captured with the same host renderer; example filenames only.*
+A grain is a tiny piece of the sample. Many overlapping grains turn a simple
+sound into a texture. Your original WAV stays unchanged.
 
-## Controls
+**No sample? Try a drone:** choose **Y → X** for the built-in source. Open
+**X → SOURCE → DRONE → A**, raise **LEVEL** to about **60%**, and press **A**.
+Try MOOD MAJOR or LYDIAN. Press **B** on DRONE for starting scenes. Keep OSC and
+OSC B levels and TIMBRE/SUB LEVEL at zero, and BALLS off, for drone alone.
 
-| Button | Action |
+## Find your way around
+
+**X** opens four groups: **SOURCE** makes sound, **FX** shapes it, **TEMPO** sets
+speed and groove, and **TOOLS** holds export, patches, master output and colors.
+Use **L/R** to pick a group, **↑/↓** to choose, and **A** to open. SOURCE has two
+banks; keep moving down to reach OSC B and TIMBRE. **B** returns.
+
+| Button | On the main sound controls |
 | --- | --- |
-| **A** | Play or pause |
-| **↑ / ↓** | Select a parameter |
-| **← / →** | Change the selected value |
-| **X** | Next control page |
-| **L / R** | Previous / next control page |
-| **Y** | Open the sample browser; playback pauses |
-| **START** | Open patch slots |
-| **B** | Waveform with a loaded WAV; back in dialogs |
-| **SELECT** | Help for the current page |
-| **MENU** | Save and exit to Onion |
+| **A** | Play / pause |
+| **↑ / ↓** | Choose a control |
+| **← / →** | Change its value; hold to repeat |
+| **L / R** | Previous / next page |
+| **X** | Open modules |
+| **Y** | Browse samples |
+| **START** | Save / load named patches |
+| **SELECT** | Help for this page |
+| **B** | Pattern editor on SLICE; drone scenes on DRONE/GENERATE; export on OUTPUT; otherwise sample trim when a WAV is loaded |
+| **MENU** | Save settings and exit |
 
-In the browser, **A** opens a folder or loads a sound, **B** goes back,
-**Y** closes the browser, and **X** selects the test tone.
+Hold **START + SELECT** for about a second, then release both, for reset choices.
+**X** confirms; **B** cancels. Samples and saved patches stay intact.
 
-Grain controls change the size, density, pitch and position of the sound fragments.
-Press **X** for delay or reverb controls and raise **MIX** above zero to hear them.
-The EQ page changes six frequency bands. MOTION adds reverse grains, pitch/size/
-timing variation, stereo spread and sample scanning. Lower GRAIN/GAIN before large EQ boosts.
+For a temporary undo point: hold **SELECT first**, tap **A** to capture your sound,
+then release. Later hold SELECT and tap **B** to recall. This slot disappears on
+exit or source loading. Use patches to keep a sound between sessions.
 
-## Play without a WAV
+## Save a sound, make a WAV
 
-Press **Y**, then **X** for the built-in source. On the **OSC** page, raise
-**LEVEL** to about **0.05**, then press **A**. Select **WAVE** to try sine,
-triangle, saw or pulse. **MIDI NOTE 57** is A 3; **69** is A 4.
+**Keep a patch:** press **START**, select one of 16 slots, then **X** to save.
+Replacing a used slot needs a second X press. **A** loads; **Y** edits the next
+save's name. Patches refer to your samples, so back up the whole **state** folder.
 
-![Built-in synth controls](docs/images/builtin-synth.png)
+**Make a WAV:** open **X → TOOLS → EXPORT WAV → A**, choose 5, 15, 30 or 60 seconds
+with **←/→**, then press **A**. Files appear in **state/exports/** with new numbered
+names. **B** cancels. Export renders the sound from a fresh start; it is not a
+recording of your button presses. Playback stays paused afterward.
 
-*Actual host-rendered interface, shown paused.*
+You can load a 5-, 15- or 30-second export back through **Y → exports** for another
+round of sampling. A 60-second stereo export exceeds the current loading limit.
 
-The pages are **GRAIN · DELAY · EQ · REVERB · MOTION · OSC · COMP · TAPE · RESONATE · RHYTHM · SAMPLE**.
-Use **L/R** to move between them. The oscillator can also play alongside a WAV.
-**COMP** controls compression; start with MIX 0 and raise it gradually. Lower
-GRAIN/GAIN before large EQ boosts or makeup gain. The quiet test tone at OSC/LEVEL 0
-bypasses effects; raise LEVEL for synthesis through the rack.
+## Know the limits
 
-## Tape-style sound
+- **No Bluetooth on a stock Miyoo Mini Plus:** no Bluetooth MIDI keyboard or Bluetooth headphones. GrainMM has no MIDI input, output, network sync or external clock support. Wi-Fi does not add those features.
+- **No live input or recording.** Load WAVs from the SD card; use offline export to make new ones. USB audio and USB MIDI are unsupported.
+- **WAV only:** 16-bit PCM, mono or stereo, 8–96 kHz. No MP3, 24-bit or float WAV. Decoded samples must fit within **16 MiB**: about **43 seconds stereo at 48 kHz**. Short samples are the easiest starting point.
+- **One sample at a time.** Sources share one effects chain. This is not a multitrack DAW and does not open GrainBrick projects.
+- **Stereo needs headphones or an external stereo destination.** The built-in speaker cannot reveal stereo width or panning. Bluetooth audio hardware modifications are outside this project's support.
+- **Save before powering off.** Press MENU and let the app exit. Sleep/power interruption and long-session reliability are still under test.
+- **Keep levels sensible.** Layering sources and boosting effects can clip. MASTER OUTPUT has an optional sample-peak limiter; it cannot guarantee every possible peak is prevented.
 
-Open **TAPE** with L/R. Start with **MIX 0.50**, **DRIVE DB 6** and
-**OUTPUT DB −6**. DRIVE adds grit, TONE darkens the sound, WOW adds slow pitch
-movement, and FLUTTER adds faster movement. Set MIX to zero for the original sound.
-This works with a WAV or the built-in synth; the quiet fallback test tone bypasses effects.
+Hardware context: [Miyoo Mini Plus Bluetooth hardware modification project](https://github.com/MagneFire/mmp-kcx).
+App limitations and tested scope: [platform](docs/TARGET_PLATFORM.md) · [release readiness](docs/development/RELEASE_READINESS.md).
 
-## More sound tools
+## A look inside
 
-- **RESONATE** adds tuned ringing. Start with MIX0.4 and match MIDI NOTE to your synth.
-- **RHYTHM** adds pulsing and stereo movement. Try TREMOLO0.6 at TEMPO120.
-- **SAMPLE** trims the playback region without changing your WAV. Raise ENV BLEND
-  to use its ATTACK and RELEASE controls. These affect new grains.
-- **SELECT** opens help. A can still stop/play audio; B or SELECT closes help.
+| Wavetable color and sub bass | Swing and phrase controls |
+| :---: | :---: |
+| ![TIMBRE controls](docs/images/wavetable-color.png) | ![GROOVE controls](docs/images/slice-groove.png) |
 
-The effects and sample controls have passed device listening and save/reopen
-checks. Longer reliability testing remains.
+*Actual 1.0 host-rendered screens using synthetic example data; not device photos.*
 
-## Patches and visual trim in alpha10
+| Generative drones | Collision instrument |
+| :---: | :---: |
+| ![Drone voices](docs/images/generative-drone.png) | ![Bouncing-ball instrument](docs/images/collision-synth.png) |
 
-Press **START** for16patch slots. **X** saves your sound, **A** loads, and **Y**
-chooses a name for the next save. To replace a patch, release X and press it again.
-**B/START** closes the menu; patch browsing pauses audio.
+*Current native host-rendered screens; not photographs of the handheld.*
 
-With a WAV loaded, press **B** for the waveform. Use the D-pad to select and edit
-sample trim/window controls; **A** plays/pauses, **B** returns. Your WAV stays intact.
-These alpha10 additions are being tested. See the [sound guide](docs/PARAMETERS.md).
+## What's next
 
-## Help
+- **First, prove the new sounds on hardware:** dual/table/sub listening, groove,
+  headphone/speaker checks and longer sessions on the Miyoo.
+- **Make it dependable:** resource profiling, repeated loads/saves/exports and
+  power/sleep/error recovery.
+- **Then build more ways to play:** practical parameter automation, richer ambient
+  steering and routing, improved resampling and independent grain layers.
 
-- [Installation, updates and backups](docs/INSTALLATION.md)
-- [Sounds, patches and waveform guide](docs/PARAMETERS.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
-- [Report a problem](https://github.com/lkotlarenko/GrainMM/issues)
+Shimmer and deeper arrangements are ideas under evaluation. These are priorities,
+not promised release dates. MIDI, live input and unsupported hardware connections
+remain outside the current feature set. [Detailed roadmap →](docs/development/ROADMAP.md)
 
-## Credits and development
+## Go deeper
 
-**GrainMM design, native implementation and Miyoo adaptation by
-[elly (@lkotlarenko)](https://github.com/lkotlarenko).**
-**Original GrainBrick by [ETRNLIAM](https://github.com/ETRNLIAM).**
-Porting and distribution permission granted with attribution.
+[Sound recipes and every control](docs/PARAMETERS.md) · [Installation and backups](docs/INSTALLATION.md) ·
+[Troubleshooting](docs/TROUBLESHOOTING.md) · [Documentation](docs/README.md) ·
+[Report a problem](https://github.com/lkotlarenko/GrainMM/issues)
 
-New GrainMM code uses the [GPLv3 license](LICENSES/GPL-3.0-only.txt);
-[upstream and third-party terms remain separate](LICENSE_SCOPE.md).
-See [credits](docs/CREDITS.md) for authorship, references and acknowledgements.
-Source and engineering notes will be published when ready. For now, follow
-development here and report issues or ideas through GitHub.
+**GrainMM: elly (@lkotlarenko). Original GrainBrick: ETRNLIAM.**
+[Credits](docs/CREDITS.md) · [GPLv3 for new GrainMM work](LICENSE_SCOPE.md).
+Original and third-party materials retain their separate terms.

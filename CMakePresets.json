@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {"name": "host-debug", "generator": "Ninja", "binaryDir": "${sourceDir}/build/host-debug", "cacheVariables": {"CMAKE_BUILD_TYPE": "Debug"}},
+    {"name": "host-asan-ubsan", "inherits": "host-debug", "binaryDir": "${sourceDir}/build/host-asan-ubsan", "cacheVariables": {"GRAINMM_SANITIZERS": "ON"}},
+    {"name": "miyoo-armv7-release", "generator": "Ninja", "binaryDir": "${sourceDir}/build/miyoo-armv7-release", "toolchainFile": "${sourceDir}/cmake/miyoo-armv7.cmake", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release", "CMAKE_CXX_FLAGS_RELEASE": "-O2 -DNDEBUG"}}
+  ],
+  "buildPresets": [
+    {"name": "host-debug", "configurePreset": "host-debug"},
+    {"name": "host-asan-ubsan", "configurePreset": "host-asan-ubsan"},
+    {"name": "miyoo-armv7-release", "configurePreset": "miyoo-armv7-release"}
+  ],
+  "testPresets": [
+    {"name": "host-debug", "configurePreset": "host-debug", "output": {"outputOnFailure": true}},
+    {"name": "host-asan-ubsan", "configurePreset": "host-asan-ubsan", "output": {"outputOnFailure": true}}
+  ]
+}

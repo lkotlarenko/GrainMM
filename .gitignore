@@ -1,0 +1,36 @@
+# Guiding documents are private and must never be staged or published.
+/GrainMM_Codex_Master_Prompt.md
+/GrainMM_Feasibility_Research.md
+/.local/
+/build/
+/dist/
+# Original release payload: preserve locally, exclude from new work.
+/GrainBrick BETA 2.0.sh
+/README_GRAINBRICK_BETA_2_0.txt
+/THIRD_PARTY_LICENSES/
+/THIRD_PARTY_NOTICES.md
+/THIRD_PARTY_SOURCES/
+/_vendor/
+/claude_gfx/
+/data/
+/effects/
+/engine/
+/harmony_samples.json
+/lib*.so*
+/main.py
+/native/
+/projects/
+/resources/
+/sample_meta.json
+/samples/
+/settings.json
+/tempo_settings.json
+/ui/
+/visualizers/
+/logs/
+/recordings/
+/docs/orbix_resonator/
+/.agents/
+/.aws/
+/.codex/
+__pycache__/

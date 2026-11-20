@@ -1,0 +1,6 @@
+{
+  "label": "GrainMM",
+  "icon": "icon.png",
+  "launch": "launch.sh",
+  "description": "Granular synthesizer and effects"
+}

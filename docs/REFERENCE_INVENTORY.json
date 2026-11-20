@@ -1,0 +1,1414 @@
+{
+  "description": "Static audit metadata only; no reference implementation content. Private guiding documents omitted.",
+  "baseline": "5d4aba8a08e5d18a10ed9608b6d6ad2030f18f8a",
+  "files": {
+    "README.md": "09cfd47a21439d23f312c4130a4aad07233500892579ffbb26a9f05114a94926",
+    "GrainBrick BETA 2.0.sh": "0d38c16e30a3abc90150b28e637a881d69832509937ed514e7cf5da1a604dc55",
+    "harmony_samples.json": "5f0dea4f0581275e78493009e895aa335077166e6d6b18b4b5862bc8812b4164",
+    "libgrainbrick_comp.so": "4e13b223fd880dc8aad8e6b5e1d48733e04a4e6b412b3abe6ec2124c6c4591f5",
+    "libgrainbrick_eq.so": "daae93a54a3ef9d0f78bcf3c503bc2a368a718965a8afa053220ceb1236c47d0",
+    "libgrainbrick_fullopt.so": "f5956f0f9aa19235928c1a5b577808d469f5bc40e2638694c1e085589eac71f7",
+    "libgrainbrick_fullopt_s2.so": "160fa1a70b06261db9418ba1938ea2239cfdf4d0138726484dbc8d1050a022ad",
+    "libgrainbrick_fx.so": "221301ee70fc0c69a9c1e6cbdd36d12737d4d6c99550b472b0b06e9d1b821e72",
+    "libgrainbrick_fx_fo2.so": "44af9b95a13d02d285e19a0449662cf85efe11b39e9bf2d632c386e92383c3df",
+    "libgrainbrick_granular.so": "84a45f76b1af2dcaf85a3049efc6058a78bdfcd8d87916bfbbcce39ea6d9847b",
+    "libgrainbrick_granular_live.so": "4477e5058d704049312ccd3e77c002bf46f280f5e118be5217368233c735cb37",
+    "libgrainbrick_granular_live_fo1.so": "827717767c3b9d82947998d8eeecb24ca87cf7acfe008e8bcffae9cf828b3c00",
+    "libgrainbrick_live.so": "0ac3a229a16a17ce763fb815b4c9997e6d67f2b00de4af262ba936e3a102527b",
+    "libgrainbrick_orbix.so": "c4527bdc53ca5ed5eb1c4683de0b0c72d67e0c6db4f69f12a242389d0314162f",
+    "libgrainbrick_orbix_fo2.so": "c378e3123785d02a817e0ed45ddcacb82bb787a4809c05d243dd4d77cbc884f0",
+    "libgrainbrick_orbix_rev23.so": "be7476b18d28c48cc59b495f405b3cc64fe64d003fe7c44ee4bbdf9841071e4c",
+    "libgrainbrick_oscillator.so": "20275080c46cf1dbd2669953cbe489b80da8e4c4162e0d7af577dc76f5a1a736",
+    "libgrainbrick_resonator.so": "136dbceb25fdd0bc9304ee14c9ca94eb5dbbc9016a74b8ac1a4c4d396900d7e1",
+    "libgrainbrick_shimmer_native.so": "db85d95dbc76f3f1a74891c3f1a64066c7d2fe6d70764f3980b9039ac2008410",
+    "libgrainbrick_shimmer_voice2.so": "f16e2b8d9194c0b6af458e805e66007c286e9f09054edc130ce79ca188bb5d07",
+    "libgrainbrick_shimmer_voice2_fo1.so": "0db4a502ee3e9b10aa95ebbd792737bc3124902794fba6dc046cc362f0ab5c9d",
+    "libgrainbrick_soundtouch.so": "59ac8ab8d2397a1e6d4f03a50af3a4d571108a1dcc3906ac148e1cd5b7e603fe",
+    "libgrainbrick_stretch.so": "500dfafeff20cdd3c0760df60a65bbe7281ba6a6592fcefcd53f479bbac74abd",
+    "libgrainbrick_tape.so": "174dfbf9d0cc8bcbb05c4a234c0c95e50ee719c03598a7f492eaa1edcceca9e7",
+    "libSoundTouch.so.1": "b2bf0b42977262c55e0fda65ccfdcd956ba4d4e6a2c5a6266e43b50031fc32d3",
+    "main.py": "7a672504272821aefa886bb729ad23ce096a8d491a5e8abc800633542400fe8c",
+    "README_GRAINBRICK_BETA_2_0.txt": "f3339d0a2ac2af8ccab92d1ca50f3f037de889361e529175d2be966e1ed8dac5",
+    "sample_meta.json": "0c0071c3aa45e81b29ced5ea15b9a6a1f267ee6ee688aaf4a0441054b896ad71",
+    "settings.json": "d5bbea78c1b072e1f554cc4bcecd6ad4f48b86b93815cfc81c3bdacc2acb316c",
+    "tempo_settings.json": "ab6aad5446c0b5ed557ff70cea7aae3a90ddeb5a59b707b37b3559b58401b86d",
+    "THIRD_PARTY_NOTICES.md": "c13421d6ef148c21de0284cf298bb376553e59b46834efd9a5734ccb54973780",
+    "claude_gfx/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claude_gfx/libgb_claude_smoothscale.so": "a27e816f66fc88bf3c5d2d164d64e21b876e98048e9cd42308dd3cf18e295515",
+    "claude_gfx/native_scale.py": "e0894d3e7d9708f1d72307a1c7f702b0b0e94ebbdb7d4613a70e22788c92c289",
+    "claude_gfx/opt.py": "c6e2b6860ff398917dc632162116b6b0be86ac5a085baf1b3f4df32c473824b2",
+    "effects/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine/alsa_live_fx31.py": "181dceac464c93e07f3c15201a017eb43e48a07ff3d4ae8bfbfed0358e551256",
+    "engine/alsa_live_fx33.py": "658d6ba2c020788a29914e80901aee3b3ffadbb720297233579109c74f2ae81e",
+    "engine/alsa_live_fx35.py": "e404d54bd9fec3a6d18075650c4dc1ac36083a126fe179c82f4bc0581dd92b60",
+    "engine/app_paths.py": "75fa8b033c5f3dd76ace7aeff777af39d36eb024ae41d9ecd7d7c76c7b3e115d",
+    "engine/audio.py": "e1b8f7393ccc0eb231d3b1a1986dbe243ddd6e407c74246e9c4ba7e1165cdf8b",
+    "engine/audio_denoise.py": "fb3be22065f2beea6d162602660b141a25c6da30ff4e181f26a626a68fcf2d24",
+    "engine/audio_devices.py": "c1e150caafe0041f81a9475eb19125a3ad3334cb14830f0185de7fa15a0be440",
+    "engine/audio_editor.py": "a08941af80f3ed522183bb13db4ca58fbd2dcfae9b4adc01936aff030f25ccef",
+    "engine/audio_inputs.py": "56c838e4d653e7f643a374626ff8c62412d88c65081057b7cb0402d31d2de997",
+    "engine/audio_recorder.py": "cfe30ffc992525f007bffb9cd16aed2c0ff25e7523f41227844d6a8f90482f86",
+    "engine/audio_worker.py": "9679658bec926b1c8dcdd0b4d9eb3110ae69634e254b5a0f1799c8fdddd5880f",
+    "engine/autokey.py": "931d82ae4e27d88c33857e73dd3cf1b5e40d8ee2ef5e1dff2bef8722c7795a66",
+    "engine/ble_midi.py": "09db96af60f726d842e1ca07cc09d8f09cfc565ce95ced62943a8c194dbb91f0",
+    "engine/ble_midi_manager.py": "b2303a65bd85bf386faafb31c99c1a1b3fe55db22ba5de38e9acddd5baf60c24",
+    "engine/ble_midi_menu.py": "c49ead68b9a2509984f65b43956bd95e466a83ac5f8d1f71319b7290a53132ec",
+    "engine/button_mapping.py": "4f403f401ac5609f5e89e35306caaf6ede32f060bc25a037c47d74ff939aa41d",
+    "engine/compressor_c.py": "41b425706d0411163afeef89cc3729421bc3483b3a5cbf8e75fe19726ca2b246",
+    "engine/control.py": "772cd36c0e3a204609440ea59ee51ea1702653559ae0a07a9b09b3d912fa833f",
+    "engine/cpu_performance.py": "6e339f2d76e3d58a7584f5e7b750abde0aa19ba4ed66f9861ee7346fb3716df4",
+    "engine/dsp_chain.py": "f40cd710496caab0a1dd8836aa928c06779fc801e75b912b1d3411058c085024",
+    "engine/elastic_varispeed_pitch.py": "8a6244f7f1cc6fae31352f39b19896a31f84ef347afbf6e430f56988a87f79ec",
+    "engine/eq_c.py": "7876870a0e5584bb5713539540528a2c4bbd6f0bf01fbff29697d7fc93859ede",
+    "engine/eq_math.py": "f2b761ddb97f6eccc2758eee32463db87005918b769d2f5b4d347ea93976d1ba",
+    "engine/fullopt.py": "14523b6762b009df7b65e515d3f66cec3d09dadcc067d623479c1d1f7a2d83bb",
+    "engine/fx_c.py": "e464f6ed54478015aafa8fd344855eeb337679bdc7ff5eda253f967a8a5fb56a",
+    "engine/gb_diagnostics.py": "136e0d6fe24be74d2dc0f287a729fbc9fd1ad9d17f055a56c11c3f6b3d966462",
+    "engine/gb_fx_profiler.py": "7a1825a91fbd477bab226867892b1dd871b6d286a6c64ea2768cff3295bedf72",
+    "engine/gb_usb_record_fx35.py": "d9fed8254fb71523ffcdcba9a5b046ad857f7430fd2c78868b5ed7df04cbe544",
+    "engine/grain2.py": "843e1cb7fc605bcae23e9e7eee31ae8c1895bf212d21286ef0f7a35846e96e36",
+    "engine/grain3.py": "49ba8a0b0477363e306d706d563ac7c5245e66d1b67668fac1ee6e2724a2882d",
+    "engine/granular_c.py": "f6473dd8342dba78f2cf6eb024ed412053e55a00183539139a026ff772b53a10",
+    "engine/input.py": "01f2ec72d8df277ea4aff59d90a36c76da96a91a915fc0d0afbe405ee19865c2",
+    "engine/live_input.py": "2a935618a2b227da6a53ae0a7ef107ebb17995697483e6a62da53a7b2c5c2469",
+    "engine/midi_learn.py": "fa52cb8c3ef2b10a105b8e77f687b3576beb6ab6fef76665a81372d29fccb261",
+    "engine/midi_target.py": "4a59ff1c1545df009f76f81e0700727029217c4d0b9c761cecaf050d463f3b07",
+    "engine/native_ptr.py": "335a776e6904d1fba2c3f117f9692e39e7b53e582bf26aeb47e4d83426d75b67",
+    "engine/orbix_c.py": "8f15dd2f6a6b86572256bf9c340cbbad2653c10bcdcd82125cfb3ae2f65124a6",
+    "engine/orbix_res_control.py": "12760f6d7008e8e7e1577f6719a5e44d3ef81671560bdadf91a6a6c32e1f55c3",
+    "engine/orbix_res_integration.py": "0fc11ddada168db2b5ed212feba2c92913d3d717fae4dc28b78c55f14167fc3d",
+    "engine/orbix_res_presets.py": "db94192eae18f4b411ecf2f68a056cb000afcb4682fb2dd9bc0d49f67a419934",
+    "engine/orbix_resonator.py": "ae1e2ca8f3781741794117dadb6cef4eef1e4d85586e06e0570b86eff80a5c9b",
+    "engine/orbix_reverb_fx23.py": "07bb2dee865dddbb9d538b3dafbffc8eeac1fe409af62a8ce21162c7dc13172c",
+    "engine/osc_c.py": "d6e9e60e85736ead703d9dc54926faff6cf60532b428b025332e1fadbdabcb19",
+    "engine/osc_integration.py": "03ab83dd4d7c8a5b557c63cd2303749aa984d5a38eadfe3abe76dd4284abd93f",
+    "engine/osc_ui_control.py": "d360bf974edc03578ddb9124e712a739eaa4f3ef4341fad74f299c7f102c43c0",
+    "engine/oscillator_fx.py": "f09445ff9fbae657aab849368eca2f68512d2dbd08323d1e3fa9cd1ea7494652",
+    "engine/param_snapshot.py": "83c97c2a2761749e6b0131a6b6ea6744f17d9fe3aa167b3702a7284e66c0950a",
+    "engine/parameters.py": "3a01d9d856ea598e352ca2d57a2e674e60d6484391f416ba1b71b3ae088ecf2d",
+    "engine/project_manager.py": "4e1100d972923fcb1478df8e581c2af7cd28665c9e3e7e38c2b3b8c0bdcaa882",
+    "engine/record_integrity.py": "b41c1e128122df7502fc565e6e681769695ba97932866b4f1de83c634d07597f",
+    "engine/sample.py": "2d20025b4d87ad12b3ebfc7da7cce038c5adb1ca21b42d62c6a4618eb210ea15",
+    "engine/sample_actions_fx27.py": "99879398e7c8fd2f582ff8847d347900dd082ee0854084587aca8bff2f9ab3ec",
+    "engine/sample_browser.py": "01cc3eb31dbc2a947fff0a414b66cccfa8d06ff6db1328b9299c158caf7c5262",
+    "engine/sample_preview.py": "35b15023c77bbff735d9a3347cd9a07d34cedbf3c05e4e494617a7157e84416f",
+    "engine/shimmer_native.py": "19ceb92b7cd71d66f7de3f41f79a8c4c0c3f42d5b3eed514c2489c0c15fd9d6c",
+    "engine/shimmer_native_voice2.py": "8adb72adc4c1a1da582f66f9e68a2ad8de7ae01e5e4c5a4707c22e0779f575d4",
+    "engine/sound_state.py": "56328f817766d1dcbb928fe1f0f0bb16f3135b26caac864d155f44b5581ee45e",
+    "engine/tab_navigation_fx29.py": "4328cef8e4b46afb8297b8b7c62b21d9474a1c2a5489cabd02eccc5541856999",
+    "engine/tape_c.py": "fb50568e18264af42b887a94de60142ac726d05894e0fe89c43773021bb99313",
+    "engine/temp_snapshot.py": "3589de1b830ff2791210a41a1a8c1cee9325d7b7d46a1c01f73d42ee435b4d23",
+    "engine/tempo_app.py": "b847f8c7dfd747d28ecdacfaf654b40cfa9b994ae8ecc8b727e95259e49a1ef5",
+    "engine/tempo_clock.py": "bf6dcd0f5544f4d45bffc761604d4997e0072501dfeae52332dcdec21615c8e8",
+    "engine/tempo_controls.py": "2f5e1a321ed889773682a60fc1cdd53b909590f3becbbe553561e8e381923bba",
+    "engine/tempo_detect.py": "7483c90373d6d76d6e8ef699dbc941138eda64e5d093e43c0586538c1679410c",
+    "engine/tempo_meta.py": "f365973d996bf526d2b5ef0d53a7cb32433a02c787530efadc878e14728b8357",
+    "engine/tempo_shared.py": "1d46b2f76207987d3edcb49e2e5facaa5f882abf303be356538a11c1e89f5a2e",
+    "engine/tempo_stretch.py": "012b0a0f71e1ca34d8a0b5558bf730e3f3f084b6b7f9c9ef9ff41c97d576128b",
+    "engine/usb_capture_select_fx28.py": "839b055088ab1d3ae15caded8a7e5c8f192d044bea397492f9e452a81da3b482",
+    "engine/usb_volume.py": "7d0da5b10bf31932bf2f0175c96edc77d9ed2eb422dca1367d1b4ecf21bfc598",
+    "projects/AMBIENT.json": "f9572d7c68dd4ca8cd9b2d2b2cbf0bbe63d5b8195a25ea83f1a5276ab9c97133",
+    "projects/AMBIENT_2.json": "861983a85dd3975c3563fa81aa9028a984b5a478ac33dccec958392d1c25e2e3",
+    "projects/AMBIENT_3.json": "2004f94f400c3ae89da64351ebce5bedeaf25b3ad8fcd466949f1523e6f63db7",
+    "projects/AMBIENT_4.json": "a270089d5dbfede36a4bcfd7dc2ff365d4e17af34f84e07b5450f57410322295",
+    "projects/AMBIENT_5.json": "70a0e76b1367eefd605819433c870738f260b8d0877ed5b29d6cd26a6ce8acd6",
+    "resources/brick_mic_noise_profile_v2.npz": "f4fb745f175fcf17f48a9d1ef4c88ed82ae767b54257986c0e7df326b6588011",
+    "samples/1 sample grainbrick 110 bpm.wav": "eab4ab497e224e13c528f5212ae1fe3cb8638de6ef664d68c18d82182dbf7570",
+    "samples/2 sample grainbrick 110 bpm.wav": "6169f339c49f8db8a076580516a6cba813132057983209d53c303f63e145f48d",
+    "samples/3 sample grainbrick 110 bpm.wav": "32c38f89bdecfd36ca99163d0a35a3b70a79916b92fdf38567d92a0414ebe7fb",
+    "samples/4 sample grainbrick 90 bpm.wav": "6c06310babeda9bbfa6837d050446cc1af7dce166e7071ec9c064b4ca8ada96a",
+    "samples/sample grainbrick 1.wav": "a3dad730ac8c64296be3d225803fc6cd2b037c4eb86ea178012bfc2051354d8c",
+    "THIRD_PARTY_LICENSES/LGPL-2.1.txt": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+    "THIRD_PARTY_LICENSES/soundtouch-ubuntu-copyright.txt": "1f3d75781898e5a7d9755ceaa9c6c1fc996e58c71c8996ede27bd676a7800929",
+    "THIRD_PARTY_LICENSES/grainbrick-soundtouch-bridge-MIT.txt": "2590fb5d0739692bdbeb92f7af1e4e737740e34d39ef21c0ba64105488996e3e",
+    "THIRD_PARTY_SOURCES/SoundTouch_Compliance_Sources.zip": "ba65cceda028a2bb95e88ff1017965c38460d05cce7d7d2cbf5137a7d97ee279",
+    "ui/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ui/anim_time.py": "53a64115cf2aa5318a383293b1e477156b764fbfcab65ab0acde02fb59c953cc",
+    "ui/ble_midi_panel.py": "09b3755dfe41e3bd80a8fce6ae26ba6d3cca77d94b8831fe3c287722ce74365e",
+    "ui/chrome_retain.py": "503be5eddf645131d1fd0668d5c558d3a08fe9b0b95a78d7b105b68b1b86a787",
+    "ui/context_info.py": "fda924db40ebc5d0bff0ce53d03dbdb32f650b81493bf86a5250746b82cb3373",
+    "ui/display_adapter.py": "c8f605087bf90c319d95a25b9fe468d8e4a5b2f7e867c563862b9ac43fa5e276",
+    "ui/frame_cap.py": "a83569c9b8b5025eb0d052f3815d579248e884eb34b9af0ee96088e7c7b7a3e4",
+    "ui/frame_scheduler.py": "64440cbb4170c78712bea50da09395234d357e5b6b74875ef9e1e1bb4839b2d4",
+    "ui/gfx_profiler.py": "9e471c401b4d0b9c7c3147b023dbdb89f83c3e061d923039e503a6a0d1b48d9a",
+    "ui/grain2_ui.py": "47e6cf587543a8685ed94453eda3743503fc5cb3efe6e22240e0371c59e02a7b",
+    "ui/orbix_res_editor.py": "48c2b457882e1a3013590d37a8556275880889e92ea11182964ddae1a3874650",
+    "ui/orbix_res_info.py": "d2d63a4e20bddf1a3f0eb2e3f0e82687c5ffc9b60040964d5fdb2780cd68ca11",
+    "ui/osc_editor.py": "6a3d92b2d1d85f2e67fe6038a1f44c65e3945224980ef53e5871cf61919430f6",
+    "ui/osc_info.py": "ebf94f66a766f6de5b136d08b032d83d124890359a514e4491f4283615f50d46",
+    "ui/pixel_font.py": "c9bd45c22240ed9b0b7c95fdfc3efd74477377588569917a6c1f7f1edaadd0ba",
+    "ui/quality_draw.py": "ab7013e83502b011d4a2d7d8a90dedc476ba58dcab727aa6225a4f539a2bd596",
+    "ui/render_engine.py": "e6ba54a2c924dc3bd6a333051953b417280946c0e8b876db9a2971f46b75b1e0",
+    "ui/renderer.py": "1082cf2afdc66c0618ce79b80e82cbf5e7a3cc0c1180c5fb65f8475cdb3f635b",
+    "ui/rhythm_panel.py": "293c749d45829e87539ab9b043f103fb54aba351813bb29a030d4d2d1e931ba1",
+    "ui/tape_frame.py": "d5686b7d6d60503f5f300ef508baaa3bcdb718a1e1369ca008a8d2496f415857",
+    "ui/tape_noise.py": "f45e3dacbac3f5baa28f69436fd48cd7c7b328187c7408d344d6c67ee03471b2",
+    "ui/tempo_ui.py": "ddbe6be311e45e4973711fa77f8c21fd554d280bc1f541920f22ae813e90fec0",
+    "ui/waveform.py": "ef50303fb75380dfb4a3992ebe33372e1d3dfc2ea1f3095c1f7ed1f21d152170",
+    "visualizers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "visualizers/audio_features.py": "3982e7d4460be4c0ce071a030044d3890f9aaf4849e7ce0a7b8f5ed1444dddc8",
+    "visualizers/cymatics.py": "a0cc4bb7db4961686db4acff0dada2134d13e3261cbaec5f1d7e37c9f7e820af",
+    "visualizers/fractals.py": "c6018768bd138e09a5db356d36e3048eece99d0c72f3897864b4f90254e9ed3e",
+    "visualizers/ornate_mandala.py": "291af481de97d43fcd2a63f8890f8675804a88648c05f4aa3c6923cdd0a06578",
+    "visualizers/particle_field.py": "f34133c59e480e14c852689b4562973bcf352c488d4e9443167819489a82478c",
+    "visualizers/solar_orbits.py": "7a543798c432be93599ba8d45f95cc1b39d3661b75974cf1e095b92346ff4288",
+    "visualizers/visual_modes.py": "d7fccd0b3c6a5df4973a639ea835f460582111244f90b68d5273f5557d53205b",
+    "visualizers/native/gb_mandala_aarch64.so": "65306718e9685e7ffc7c1c7b01dc6ec684336064f58eef1ba4c033ed2079902e",
+    "visualizers/native/gb_mandala_x86_64.so": "ce4e69378877f6360e2c9dbe23f275ba500b91a1e468218e1caa3aafcb5deabe",
+    "visualizers/ornate_mandala_data/atlas.bin": "d449ec2fe3ba9e6271e4dc165dd8ba19196860ebb4f2427b0ef04edd716851df",
+    "visualizers/ornate_mandala_data/index.json": "a4287d856c44465c59f25089a6abb29f1232571e07ccf27c8d0279d09b8f7773",
+    "native/live/libgrainbrick_live.so": "0ac3a229a16a17ce763fb815b4c9997e6d67f2b00de4af262ba936e3a102527b",
+    "native/resonator/third_party/mi/LICENSE": "41ca0edd1064f8edb5817d0c7858f6d001c6ff270436282a71e29d5e70024eca",
+    "engine/rhythm/__init__.py": "7cd1e0ee2d67e58935d1722b61558ab01187dca988d983911d0e05efe211efe8",
+    "engine/rhythm/app.py": "68a955d386f4aa32d1af37167240c97bc4e52740b9560cf06256959a38828015",
+    "engine/rhythm/clock.py": "207b19874537639a8336e56ec9449b8d1f930ce952c2e03187654fa4c5ac121b",
+    "engine/rhythm/controls.py": "b71f974daf7dd4f4a8594ce67e078e83d1d346668e419817bc5b4da6eba4789e",
+    "engine/rhythm/integration.py": "ea5420f939f12d4a8b5e4aa90ff4229deb2456f8aaedefa8cf3ad2cdeef65d56",
+    "engine/rhythm/midi_out.py": "3fe847fe51addd4911ab253966b4d852cb08c081c3d1ed74f87c7daf752b4ffe",
+    "engine/rhythm/model.py": "dd07565deeb63cca405a96b69e224e0533a8ed5e0e83c3501145eba552ce086f",
+    "engine/rhythm/native.py": "575a0f7edbbfa3818002595b3dc7bc01d41f6d33fd928afba29a509ae9c036a6",
+    "engine/rhythm/sample_meta.py": "c250371b7dac4f00e860c1e9e3662c2ca96b5077ef479478b4bdfd13929a1016",
+    "engine/rhythm/sequencer.py": "a9a5e2027668b929ef37c48b4c306cc26bef7653b4491135bbc02e3753b048dd",
+    "engine/rhythm/shared.py": "7342bd9842245723e967412ac1def136c9567663476c50a7e10d4e75bcdebc2a",
+    "engine/rhythm/slicer.py": "6846e1f0b9af3d12cb2c06f2f6d55561b3f7b67cf5e12a01979963b00466213d",
+    "docs/orbix_resonator/THIRD_PARTY_NOTICES.md": "edc48d792d9ff8f276b4c8446177e06e319967fdfdd1c3b94a640447397aa615",
+    "data/orbix_resonator/factory_presets.json": "457f44b3f00ed7feeb8f0af51c3386add0857d9acff6f06b9ddc16332addd393",
+    "data/orbix_resonator/factory_presets_metrics.json": "f8f8af9fc790634a5d94507dcb44c85c724e9053adfcf0578516bb792d07bf43",
+    "data/oscillator/showcase_patches.json": "c4448a171472d481285ec2702985ef6387e517f173fadb689e1d55ba41712065",
+    "data/oscillator/showcase_patches_report.json": "baa718bd8ba4862a015e82247ad4d80e251db0550534f220ec6465e1f5a9120e",
+    "data/oscillator/wavetables_validation.json": "bfa22bb3d615ec3347e7baf3b60d8920de83fecde59d1745185b9361705b4857",
+    "data/oscillator/wavetables/catalog.json": "fa21e179b698ed3417ca331979224b6f275b2fd37107d3b64b3c8ccb5a15ddc0",
+    "data/oscillator/wavetables/previews.bin": "8a30cb55cf8407efd49f941cbc287f8ea9ffe1ce3f4bc3932cb17031d635e3ab",
+    "data/oscillator/wavetables/wt_001.gbwt": "eac85029e0ee9b1a6b7cf16c482b0c853079f228714974e71fcce4fdaca33ade",
+    "data/oscillator/wavetables/wt_002.gbwt": "f9d4a5f85b26eb2a71a14bd1f96077c84bfee0734eb3c0cc01a60facb615c3da",
+    "data/oscillator/wavetables/wt_003.gbwt": "a452ccda09c789ef21319b8b47150bd1e901f4a1618cd303fa9bef9e8e329ac8",
+    "data/oscillator/wavetables/wt_004.gbwt": "c17d87c16bcf46595e426bb606fa4e91ae443288a93675424217d25102e94e61",
+    "data/oscillator/wavetables/wt_005.gbwt": "e4180b739527d73390e01646a5427c68547f71b252e5c03b57665648b0f0de1b",
+    "data/oscillator/wavetables/wt_006.gbwt": "61b59c95db852080993866b3ccc824e80e8c4056a86c4657e626d5eb8807b5c4",
+    "data/oscillator/wavetables/wt_007.gbwt": "89c42d4db366623e4a381679c640d00ceecafaf19188bdb29a608f030a346d06",
+    "data/oscillator/wavetables/wt_008.gbwt": "770c5cac81a6d488c3da57044bd82aef68c6847dc8357709e87911ba017e8941",
+    "data/oscillator/wavetables/wt_009.gbwt": "9716aaf0387630d15638f2ab68071118cc1405d89345a3c268ff33c359b5fd3d",
+    "data/oscillator/wavetables/wt_010.gbwt": "c1905b24afcab2d0c3202168596d2bb6ec52343f1768a40ca09f040cc9b37f88",
+    "data/oscillator/wavetables/wt_011.gbwt": "1522d084d669d91178ca2eb9e80168b931ed4dfb704383feccebb19b16c7593b",
+    "data/oscillator/wavetables/wt_012.gbwt": "52bab67c882515d1355f3cf33e467bbd924cf32873a840723228dd408d97d5a7",
+    "data/oscillator/wavetables/wt_013.gbwt": "2e4fc732ffef506618d06a9f55f34e8f8b21eabefeb9a57b72f59b47492197fb",
+    "data/oscillator/wavetables/wt_014.gbwt": "03e3cf31710fbe274d24caf8140b31e7ec678723f8c4e2b8f890dc60f4daf25d",
+    "data/oscillator/wavetables/wt_015.gbwt": "75cb8b81b1504d8bef84f7a078a869dc3f787d00e72058f5dec0fb908565ae19",
+    "data/oscillator/wavetables/wt_016.gbwt": "69061cfac741279b156b53931e5a5a9555c8cff8454145bb7eb731f74c29233e",
+    "data/oscillator/wavetables/wt_017.gbwt": "20553f7e9724e63547db7d0558067fb22c08a47ae9bba4a9e36643fc0e6ebe29",
+    "data/oscillator/wavetables/wt_018.gbwt": "c0d9fe7567662ada22e66a61d29f749341218a0586b62bedbce5e37f3fb840c6",
+    "data/oscillator/wavetables/wt_019.gbwt": "03ef7679c230f0dc6932d2c99d217f5a8575843efbab907b6ad7f01f0ab61762",
+    "data/oscillator/wavetables/wt_020.gbwt": "b300603b1fafe58dcc8517ff4b1f0ec7987957bd51e1c4b023d13d1c9a24b6c8",
+    "data/oscillator/wavetables/wt_021.gbwt": "cd0c9366d09fbc32b57dae966fd92e46882cfaa0f6fb9786526b759fa904eac4",
+    "data/oscillator/wavetables/wt_022.gbwt": "9265372d69d9665cc2889c24309fcfff24049d7bdd40787e41e3c1ba29006734",
+    "data/oscillator/wavetables/wt_023.gbwt": "03f3931c67637078a3ac4e16f1271e6005de8f0d2871ec32f71dc8e787baeaa6",
+    "data/oscillator/wavetables/wt_024.gbwt": "8667e314b405bc0bb0389e82c5c752b4c7c26d968b1d3826cd2d87bb6c40a708",
+    "data/oscillator/wavetables/wt_025.gbwt": "dcb89b5f977a0ee0109c8bebe60207a092988b792da6650395194b42b127bb21",
+    "data/oscillator/wavetables/wt_026.gbwt": "bb72e7407a952aa7f672912aecedf04f377bff1c5a56affde6bd635b73a7e47b",
+    "data/oscillator/wavetables/wt_027.gbwt": "586df92ecbd963e3d54ba07f9e05d5f74a844712cb257033d63d8c0c5ec31f3a",
+    "data/oscillator/wavetables/wt_028.gbwt": "15abb72084dda0d27c94223745079cc9278f1c4c9287256e58a829ca8ce24340",
+    "data/oscillator/wavetables/wt_029.gbwt": "ad38af6580ced3c63cbfc78de0f032b5b0c8250e29b2ab39904cf8ceaeacf5d9",
+    "data/oscillator/wavetables/wt_030.gbwt": "924a4b63479905afb9bacc9b1bae788fd47675acb71fd63d3ebad603d51f4843",
+    "data/oscillator/wavetables/wt_031.gbwt": "f11276297a6ad0ac568fef0502136a168fbbf5eb864ab7e6fc953b0430319cfb",
+    "data/oscillator/wavetables/wt_032.gbwt": "eb64895142c28f68f33dd4c356fcd7552c949a8944401b11fd7d98ce1040f3e7",
+    "data/oscillator/wavetables/wt_033.gbwt": "ad353884fee555395262c687df4b8bb002428f591e62173b33474a59e98740a8",
+    "data/oscillator/wavetables/wt_034.gbwt": "334976b08110959d82eecf8b849f52ac1d67b261ab8e8ca571d2e5437f9ca140",
+    "data/oscillator/wavetables/wt_035.gbwt": "7be883251e9320ef3d8fb2856f34074954c9c5ae2adbc41a35447225a1e1d3a8",
+    "data/oscillator/wavetables/wt_036.gbwt": "129007f62a048398c0198c9d8a37bf8512d977a48b122a534d4ff2df5079f432",
+    "data/oscillator/wavetables/wt_037.gbwt": "e324ac3b51311d4faecf4eed32543117e2226ce3d4e05f5951d71b59151f36c7",
+    "data/oscillator/wavetables/wt_038.gbwt": "46eaf47d5b538662f53f52975c4883354e56708b6086f2af3995633ee8ad8f87",
+    "data/oscillator/wavetables/wt_039.gbwt": "bbc994ad8409d20d00ee226d0d87adf111e9d9f5f898a0c248a61cdf822ebc46",
+    "data/oscillator/wavetables/wt_040.gbwt": "a29167759b8f6e77f517729258ef27f20de66ad1db1b243a5f37aedd1b38f830",
+    "data/oscillator/wavetables/wt_041.gbwt": "ec4d78c5e3a11ac986a9d76f2b8b6cb4e9dc35e90432f7713ba823cf49d60510",
+    "data/oscillator/wavetables/wt_042.gbwt": "b9b34fc78577b2b29bd595f4a6d5c3d78d6b2ea76f67ab182e2b38ca739dd1f1",
+    "data/oscillator/wavetables/wt_043.gbwt": "ba57402edb370a4c85e8f9f958b38f9733dcb8b8c068ace496490621fd01672b",
+    "data/oscillator/wavetables/wt_044.gbwt": "896091f57b854ec96d3bf09e00cad0dae967ef5468d530d718ba922bc75c31db",
+    "data/oscillator/wavetables/wt_045.gbwt": "553bd424e46c1f35d8996ba44ca42345b1b0cb6f3fe19686cd68f3fd607b1589",
+    "data/oscillator/wavetables/wt_046.gbwt": "7aa91b6601cfb336e878a063704f707c535ffa1057d7457777ca95a566a89ca4",
+    "data/oscillator/wavetables/wt_047.gbwt": "360de4499d42670fc7648a7f1ce4ef4d828a3530e9eac910169decf17ba8ae78",
+    "data/oscillator/wavetables/wt_048.gbwt": "bf3a9b111e226f2b93e59180098c09d409190805b3410f2763dc04ac2ab81c94",
+    "data/oscillator/wavetables/wt_049.gbwt": "2e663ff8f9bf0b5f739370b1079c0788d2fbfa5ec33efaaee45fc5abc5a82cbb",
+    "data/oscillator/wavetables/wt_050.gbwt": "a1c86211320ec8207cba0a7a9658ecfb4449727514b9e142cf59e2004a79bd30",
+    "_vendor/numpy/__config__.py": "4ddafca5fae8257668424e4205b25eacebcecee6f9d92e76f1bc791005d6e258",
+    "_vendor/numpy/__init__.py": "22cd1535fa14d74ef6f457cca149ffdc80875f460be313b8f895273f78bc402e",
+    "_vendor/numpy/_distributor_init.py": "20acb64c7c26bb9520063b556f06c3f47f80a7cb9a509a0f2766ed43825ab5da",
+    "_vendor/numpy/_globals.py": "9de11d71f2d9a072f06deaffd57cab9f6e8b717cb432b4ad6b4dd97bb68a6ba8",
+    "_vendor/numpy/_pytesttester.py": "950513bca573ea44fc6f8ca2315fae5bebc6f4a4aff54cea026c5a10c7b34ddf",
+    "_vendor/numpy/conftest.py": "1d9c96a3fc09cab6e09f25f123cb74e563a0fc8af3340327115ecef24a07a2eb",
+    "_vendor/numpy/ctypeslib.py": "3e8e170967f1870150d50f31f0379ac8688c0892f14446820e45727a569dc415",
+    "_vendor/numpy/dtypes.py": "06e073b6b3d045ab149956615ebdbf36026e8dd513361370779f696591e4de50",
+    "_vendor/numpy/exceptions.py": "ee3eedbfc7305c6658825772322b069a7031025dace18534bdec4c13cd726250",
+    "_vendor/numpy/matlib.py": "fb9e2f4ee18881e4cc83d6549849513d9e07afe5d9fa89bdc4bcc0b12a13be77",
+    "_vendor/numpy/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "_vendor/numpy/version.py": "3932e74a1d0d19f5b22fc56b9c88f435db7f29939397567e903f427fe8d13266",
+    "_vendor/numpy-1.26.4.dist-info/LICENSE.txt": "b01a781fe2f8b83292cf6ebca087576437fbe514218a0062f841e458bdafe4ba",
+    "_vendor/numpy-1.26.4.dist-info/entry_points.txt": "cdd772609b94c3d52e77b2de2dfca75e4eb6febcb49468a10f008882e8017593",
+    "_vendor/numpy.libs/libgfortran-daac5196.so.5.0.0": "73b06dc7d12c5d4e37fe8ba67aa9ab440bb794e79adff58ae894b3d457e71bd7",
+    "_vendor/numpy.libs/libopenblas64_p-r0-17488984.3.23.dev.so": "37bbe4b1cbc29e5c68a3df2d3cfcc5aac97ee66c856f40fabedea760cc3b452a",
+    "_vendor/numpy/_core/__init__.py": "0bcffbc1b1ea524077e49a2e63f5cab1ab3528ba5167b2475ae67b54638f5695",
+    "_vendor/numpy/_core/_dtype.py": "bc4d7afb28b051262c0086eaec594463519b5d9029f308c00c3c498377815fe5",
+    "_vendor/numpy/_core/_dtype_ctypes.py": "8b9121a163d486ee2495add7bb866f5c5d6554b3e223a660e21ea8f236a26a6a",
+    "_vendor/numpy/_core/_internal.py": "839ba09aa0e05214a589ee7ea2739cb5c9b8a7481c30748844b1d562d1539353",
+    "_vendor/numpy/_core/_multiarray_umath.py": "54fb684f6b879f2537aca2f41b6ec28263660755911ccd26b5ced8f4bf390b75",
+    "_vendor/numpy/_core/multiarray.py": "919c42ffb3f7270cf5440a73414d901a6a92ab830012f2a66891189c0b1b48eb",
+    "_vendor/numpy/_core/umath.py": "61c57471d6c671e9ba0f93f7c97edc47d1c6601ad3f15328020081cc6c0f8608",
+    "_vendor/numpy/_pyinstaller/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "_vendor/numpy/_pyinstaller/hook-numpy.py": "3d443e98d5a37ba6c500b07e98b54544f92f6cce09a4b5ee9c1eac8c16d3cb98",
+    "_vendor/numpy/_pyinstaller/pyinstaller-smoke.py": "ea22fe787310686debc674b912072fac2a84966f5a28bd3b0a3af51592525e5b",
+    "_vendor/numpy/_pyinstaller/test_pyinstaller.py": "f0afbb43199fa17086d0dc11d1b84880236b0e31a5ad3cd69eb475b11f1bb605",
+    "_vendor/numpy/_typing/__init__.py": "eb0f44f55f55693eef4ccfaf7ae6bc5dcc92bf9d097b9a923c9ccaf474e87088",
+    "_vendor/numpy/_typing/_add_docstring.py": "c508505f7ef668dfe6dd737de429de3313924f615d3dca2f47e31733ef5ea79f",
+    "_vendor/numpy/_typing/_array_like.py": "2f8827c762961bcc98728bb3e5bf5ba0922490536d38957a423727182adb9d16",
+    "_vendor/numpy/_typing/_char_codes.py": "2d1e753b90140436c2989be5328c7252fb1fbdbd69ed61eb7b182d4c6b6e5937",
+    "_vendor/numpy/_typing/_dtype_like.py": "db5531cb452021ac0633cdb18c317f89f32afa73fe064867fcba622bf1ef582e",
+    "_vendor/numpy/_typing/_extended_precision.py": "7468a8b3ed64f900467b0ed817338d653cd55b1cfe69801aaa571c976fe1e41a",
+    "_vendor/numpy/_typing/_nbit.py": "f8440e4a11e9077af7d1be1154472bb90453713685019c2da8227806cbe91330",
+    "_vendor/numpy/_typing/_nested_sequence.py": "e5e35a559015f6d6502c558760eb95b37dfa263a22696c72650edc30a6fa9b52",
+    "_vendor/numpy/_typing/_scalars.py": "7953fc3e395c4c8958eefd1f448ded1573e8816b692c967c9c5bd146b2e30eab",
+    "_vendor/numpy/_typing/_shape.py": "24fcbb8c93242121854e792088489f60cfb8c537236fb24c4642c822364bc34f",
+    "_vendor/numpy/_typing/setup.py": "484d10e873ea0e35947dc780e325e090823ccb7cfb122485d19f8c370388c86e",
+    "_vendor/numpy/_utils/__init__.py": "1e17adc2c8b779305ef077566c6e75cd799cad7d4388f2f19184abb2530b61c7",
+    "_vendor/numpy/_utils/_convertions.py": "d3133175e2cece20e61ec44cffc96e121e12fa441d328320e86c4d0c36acebd9",
+    "_vendor/numpy/_utils/_inspect.py": "f0c6bb4014707d258a78ad52849a4535cec20e113a7e4204ff0af5171ac6d40f",
+    "_vendor/numpy/_utils/_pep440.py": "56bec1dd0b228d1e69ea1f18033d8b8cd194cb31d4279819e2fdba3696402837",
+    "_vendor/numpy/array_api/__init__.py": "5edb6d59b0dfe98874fe6e33a7e2ffbace072a7577a06c1d941ea7fb4d50f4cf",
+    "_vendor/numpy/array_api/_array_object.py": "adf081cc4eaf5239381c49501935707ba4f0dafc62531eed981a501269b58819",
+    "_vendor/numpy/array_api/_constants.py": "0186b23768dfd43a79ad767b58f05d521b4f068fc93028bea43f685b9ce61642",
+    "_vendor/numpy/array_api/_creation_functions.py": "e92a8777366a1ce245132585b6a9e3e8a20a462beb197c513a58277b3ff732dd",
+    "_vendor/numpy/array_api/_data_type_functions.py": "3f9ec53ac35d5da84d52b895b5d95da276ef050aeb664573c596dcaa447ff000",
+    "_vendor/numpy/array_api/_dtypes.py": "90353534bbc440df96d873e6276c063f1f2388d9056ebbd3083d53d514fc3f0a",
+    "_vendor/numpy/array_api/_elementwise_functions.py": "d241ae0d7dd4aff429ead04c0564ceecb3d4c735cd180940d9248985d029e035",
+    "_vendor/numpy/array_api/_indexing_functions.py": "77e833ab3caf478e4541ead1609adb0730961670ec656488f6982003941644ee",
+    "_vendor/numpy/array_api/_manipulation_functions.py": "a82a16e41e455dc14e58a3d4f43f4c5c774c79722ecef9c7514be9acd9707e37",
+    "_vendor/numpy/array_api/_searching_functions.py": "986662aa17985c65a20caf6ba971620ca5f4fc1d262753a3740fbd142da8e650",
+    "_vendor/numpy/array_api/_set_functions.py": "50ba5f2b5cf39d6f63a17d435d288fd11dda85c0c1fe9a3b999969b11aa2ec5b",
+    "_vendor/numpy/array_api/_sorting_functions.py": "ee9b3397134defe0cda84665a2718b150ae55cf3fb7af540f23377d4d4a1834d",
+    "_vendor/numpy/array_api/_statistical_functions.py": "1eca5f62d7995926b722732cd74299cfeb24dd9b96ead797e9f35da3cdbd4fce",
+    "_vendor/numpy/array_api/_typing.py": "b8a89d469ea76318079c43daa975d9b030d9eadc352ec8696f02efcbed3d79e3",
+    "_vendor/numpy/array_api/_utility_functions.py": "1f0c9cca56cf020455cf89d9be3bf0a8dde642725ba8a03e35131a02f20ff821",
+    "_vendor/numpy/array_api/linalg.py": "40fa46dad1b5a598338ebb538e33aed860eeddc23a5294ac2ebb06fe8d635d89",
+    "_vendor/numpy/array_api/setup.py": "5b1eaa0fb194fc03e2a8aa2560f3b4387bf8787198ae33d99830208d684e1213",
+    "_vendor/numpy/compat/__init__.py": "8801eb9ac656ce8b8e312c83f5b75213400f58c951a6a5bdd8c42017ccbac771",
+    "_vendor/numpy/compat/py3k.py": "25eef809593feea23fa97ee92db61cb9026cc6532ad69a0621f448ac7f7d9194",
+    "_vendor/numpy/compat/setup.py": "dfa5f5905d02fcd5513977c9ef0dd241e066e4020306e25b339a93edcbd20e05",
+    "_vendor/numpy/core/__init__.py": "08db0ef806f8cb03365b3dc06ea58e1f78a0d6ae419e8f4fb1432b0aff87352e",
+    "_vendor/numpy/core/_add_newdocs.py": "dfd24569e0cf376390952c1fa58ebf26af5f3b9bcc2fc64c17c278653c7f9ebb",
+    "_vendor/numpy/core/_add_newdocs_scalars.py": "3c5f6ff0f39c48d1fa10b625b64c7d7b4ec35a03267ede8d272f73111dc9938e",
+    "_vendor/numpy/core/_asarray.py": "3f675d95902c83588695e4517e842ffda2acd8dec01b0a68e4ae1942fe148e59",
+    "_vendor/numpy/core/_dtype.py": "4a2854cf8d691d10774362e261892e83a2e03012a1e9557cf4c3a92f19d741da",
+    "_vendor/numpy/core/_dtype_ctypes.py": "56e8388bbc4a8739cadad7488e69f879b7250a5a5a089c1265496f128625d048",
+    "_vendor/numpy/core/_exceptions.py": "75958aa9f74b46f26f6c0106fdfa1fffc8a410ac636a400332dcb590b0bf97f3",
+    "_vendor/numpy/core/_internal.py": "7fd90d0ee4fe146c45d44b553952315d69c7f6033d9fe279576cf01ccbf81c49",
+    "_vendor/numpy/core/_machar.py": "1b76b74d7bbc5435bfd4433128a2e718c6ef51284421412f7b779a9419492771",
+    "_vendor/numpy/core/_methods.py": "9b7d69d168dc15419c91b2621e70a949a2101aabfe2eae6788862475ddf760ca",
+    "_vendor/numpy/core/_multiarray_tests.cpython-312-aarch64-linux-gnu.so": "64de1dfda91ac4d80ff7d2e28b8a192d13d0d8a4b7271badcea8506fb8ffaa3e",
+    "_vendor/numpy/core/_multiarray_umath.cpython-312-aarch64-linux-gnu.so": "fb1837bd38404656b3030d6945c4bceb253d6b308a0e45058af58de4b0725cf0",
+    "_vendor/numpy/core/_operand_flag_tests.cpython-312-aarch64-linux-gnu.so": "210c08e9d145b3c7c50adf89a3e4d205147543e6458e5de9876d9926702aa750",
+    "_vendor/numpy/core/_rational_tests.cpython-312-aarch64-linux-gnu.so": "814472fb44c505dc045ef954433fd1e347f430f813a277ebf204f16411ddb06d",
+    "_vendor/numpy/core/_simd.cpython-312-aarch64-linux-gnu.so": "cd6af2f0ed8ff28091b46e478fa8e7466c19c460f673ea96867aa6b1208ad50c",
+    "_vendor/numpy/core/_string_helpers.py": "f9f40cf33e6cf3fc97e38d0f9a03441f74948c4a1730fa4f4b2b19c1664d6eea",
+    "_vendor/numpy/core/_struct_ufunc_tests.cpython-312-aarch64-linux-gnu.so": "f6d5c82e17cf16bc68506cff8560d200bcb26f42137118870bdac5a5cfa9db20",
+    "_vendor/numpy/core/_type_aliases.py": "a95e80665b145873164f27666726bbdf1b8190a5e250aabf5972e3eead826d9d",
+    "_vendor/numpy/core/_ufunc_config.py": "f93c297bc767778e5c7171fec3e07d9ef53cc8239dd44d1edd6a6cb6cde0fdb4",
+    "_vendor/numpy/core/_umath_tests.cpython-312-aarch64-linux-gnu.so": "eb5815836104baaed816e92dff9fdf5c737a313b50e21f02338ba274833ad47c",
+    "_vendor/numpy/core/arrayprint.py": "c92663e1364515509ae7284c989285610621b904da6d94d105bd58a22083f9a7",
+    "_vendor/numpy/core/cversions.py": "1ff88d229c7dfa1635710371aa34f677fe525d98496cca3f71aab8feae8b07b2",
+    "_vendor/numpy/core/defchararray.py": "1b52c4c64f9d31e55361186d620702644b07939b646b093b8225dc2b84392953",
+    "_vendor/numpy/core/einsumfunc.py": "4eb2fab7bf45d07d00407d32e428fb4ead3fa739387d5162fb8ab88c99ae8d84",
+    "_vendor/numpy/core/fromnumeric.py": "60cb71381839d5531e9b7f401d716cfb8fef39bd69e3c7a2ee78d77584d127f4",
+    "_vendor/numpy/core/function_base.py": "b47835a921d3cf578eff01d734546ddd0e34baa56d3d3d9ec9076b59b222e304",
+    "_vendor/numpy/core/getlimits.py": "028a5c4d90c251730f704288644d5ba2d7379848662dbda9d7f7a396ad422ea6",
+    "_vendor/numpy/core/memmap.py": "c960492de542947b03f0162eb277fd6ddab2a4e30fae3dffce83bf950db354c7",
+    "_vendor/numpy/core/multiarray.py": "cd76967ff0d29051168d442a55108679ebf0b08ea48d0df1ebf314c00d58f1f9",
+    "_vendor/numpy/core/numeric.py": "0e06a36820d78a2411fb3b96febaf1fd0840a52b1ae64e4538d2b7524f667d3b",
+    "_vendor/numpy/core/numerictypes.py": "a887fdbf53a93638d54335e72a90fedd5d35cb9063f61bb0e45f94e566b88257",
+    "_vendor/numpy/core/overrides.py": "6146454bc44206f389dbbb07fa30d17323233829fd56280ccae418e09db52412",
+    "_vendor/numpy/core/records.py": "e26a488d4a765ed671639703d92f2681f9fc182cd0186aeb92a2c1a8027033e4",
+    "_vendor/numpy/core/shape_base.py": "44f30ac40eff14202083f0abb84c65d0b7a19dccd24c56b103a86b71fad4ce7b",
+    "_vendor/numpy/core/umath.py": "25b4ff4b19d9ff73049a3388f54b57dc2700cd7e50fb84439679e10c0109e55a",
+    "_vendor/numpy/core/umath_tests.py": "4c8cda0dfac41c781273627993114489babc30e3e1c12bb239939406c64d5523",
+    "_vendor/numpy/doc/__init__.py": "398984f85eb1d020f4e4f0836363225b51cb97007a8bdbe10e993e6b7af89476",
+    "_vendor/numpy/doc/constants.py": "3e55e88fb6f803c01af670036e0f37bb34c1449697f1dbc998475b9f81433cfa",
+    "_vendor/numpy/doc/ufuncs.py": "8b56a52e0d7d98dc82159d8b6123991a6fbe46c44dd71eb753f51853e377c7ad",
+    "_vendor/numpy/f2py/__init__.py": "9beb72fd68896781957d5e7efa427730525a2d77acb73e44a3ee07d053ec70ae",
+    "_vendor/numpy/f2py/__main__.py": "ea2da3547d9f3eb895d5aa1c4d8fdd505bd62b5f2a6bece3a6721203e3a9177c",
+    "_vendor/numpy/f2py/__version__.py": "ec71dd8d1f361420667edc0c472ae585c123fbc98641bea8087fb09543c7e0dc",
+    "_vendor/numpy/f2py/_isocbind.py": "cda060a5f3cd466c551b776850895b6488b207df7432c5e2c0369bad28fd1e74",
+    "_vendor/numpy/f2py/_src_pyf.py": "e2de9337864a59c882e1fd73e9fc1a1aba481a11ca462c077dcacd8f8148cc28",
+    "_vendor/numpy/f2py/auxfuncs.py": "74db386f628321c1b833584f06f0f4f7e561ec20f394f22b16c70e76f2f7a75a",
+    "_vendor/numpy/f2py/capi_maps.py": "10d8d8c9e67708225c2f024982628e498ac3d4a3ee869c1ab97a9e8b3755e79a",
+    "_vendor/numpy/f2py/cb_rules.py": "e53b876c95868ec17ac953732ae576b409f074bca171696676c8d89433993afe",
+    "_vendor/numpy/f2py/cfuncs.py": "289c96ee67639854a6c6cb1f79e80626ce4d67217799932036f3b137dfaf6074",
+    "_vendor/numpy/f2py/common_rules.py": "80707be96ca96e456685a0ff456872f0e778cc34e08fc71b0ce754748a7a3c84",
+    "_vendor/numpy/f2py/crackfortran.py": "12b2dd9163fc3317b25b9bd53c65f0cafaf1640c329a5bc8042d2d876aef2bbe",
+    "_vendor/numpy/f2py/diagnose.py": "d12457044da126028937f45fe199f4d282970bf4e46b779f3d6338ef383a0686",
+    "_vendor/numpy/f2py/f2py2e.py": "e6dd3ddd9438c6cd3fd146f269855ddb203611539a38072e536f4923e214d808",
+    "_vendor/numpy/f2py/f90mod_rules.py": "a2d9b7fdd9952276b47815472eeffaf77b376bff36954de9a9ea8369c588dfbb",
+    "_vendor/numpy/f2py/func2subr.py": "e9dd91e5ac2e1d14f8c7381f51fc12ec91d3aa184089e497704365b2c0ffd9ce",
+    "_vendor/numpy/f2py/rules.py": "07817149811f67fd63ff3f46ba540d67504dacfad4be5537c9bc704e4ac8c632",
+    "_vendor/numpy/f2py/setup.cfg": "1699f8b23a93979393e6ca7c85aa8a2119d47133d934ce8c22f509054ec12218",
+    "_vendor/numpy/f2py/setup.py": "326015b294fc0c34ea0ee2fc6498712bada0d2572ca38bea23a40d43d0ac7e84",
+    "_vendor/numpy/f2py/symbolic.py": "8d60680301020b145d59ccd1f6becee94111718987fc66dd70045e369edc9896",
+    "_vendor/numpy/f2py/use_rules.py": "de94c338fbabea06cf1cfb70b8c24f42fa6750cc37f4b6b0d4a1521f472807fd",
+    "_vendor/numpy/fft/__init__.py": "1ea8e617ab3f761d118b8519cd40ed38a6cd5327c07c90167b0ddedc42ff2949",
+    "_vendor/numpy/fft/_pocketfft.py": "5e49bcc1c3f827204d31ba746681c85a13439609625f6e11ceb0eea36f6e464b",
+    "_vendor/numpy/fft/_pocketfft_internal.cpython-312-aarch64-linux-gnu.so": "0811c4b82f88a7ddf277553bbb4fa0c0998990141925c27cc8972ea04e02e65a",
+    "_vendor/numpy/fft/helper.py": "68d8f501c2efb5fa17dba4622cec1c47e93641232e0599068f616ed027853c9b",
+    "_vendor/numpy/lib/__init__.py": "5cc3cd2641bf990fffc6ebdb7f439ca68b6031b03da30b75d191d8567607abc1",
+    "_vendor/numpy/lib/_datasource.py": "0831778a6e88c5d63732ee9fc114269121019974b79105489d0e29957b285fd7",
+    "_vendor/numpy/lib/_iotools.py": "620f4709f3e0e2d6e16dd80b3dcc52322657ab5c43a6bbc928b79b2f0843b336",
+    "_vendor/numpy/lib/_version.py": "eaf2bb73335207f2ab5b1dab649cc9d69c8e73bdd0d3b84081f2c1e48b540a75",
+    "_vendor/numpy/lib/arraypad.py": "6ca3fb652f4d605633a9293c3a7a452c5accb2e6b89bf85ca85b22edc1a4ac91",
+    "_vendor/numpy/lib/arraysetops.py": "189d91864cc826621bc321ba8772ce1533d783ada433db5c5756beeed75b56e5",
+    "_vendor/numpy/lib/arrayterator.py": "050f7b4b4d33bdf5115197deb34199a3ee61c9d60d46ebf05f52356cbcde4629",
+    "_vendor/numpy/lib/format.py": "4fca893321b60c35638d834da54bc181f03db42a36dc84b4c3d6f2441eadc304",
+    "_vendor/numpy/lib/function_base.py": "2218607d2998244f9d1e850e3171cf886617b28f8d7573e92d717dcb480403a2",
+    "_vendor/numpy/lib/histograms.py": "c6c8ffaa9699a08d81bf5141a58f2620c3c9ad8462b8806cce7ffa90eed81510",
+    "_vendor/numpy/lib/index_tricks.py": "e0f12f5e4e9515392db4c562601542e320e1c8e88a2289fa269226d1dfc298d8",
+    "_vendor/numpy/lib/mixins.py": "cbafcccd0ba2363bfed4415544eaafdb2d9c0098b95f8ad06336d90b25325e0c",
+    "_vendor/numpy/lib/nanfunctions.py": "e848f3c9d665ba02337e210d2ad0b8c9c67635c92df19420e6fe83ead5f54a25",
+    "_vendor/numpy/lib/npyio.py": "3548ed16f0263dd4e3c0943e89afb16c2afce3d33f33a36294fe481df90a6918",
+    "_vendor/numpy/lib/polynomial.py": "e80c37ff6bdd6e1e2eac4450e8d68f85ff5afd3d68d68e9c8e6ddf6f9677fd81",
+    "_vendor/numpy/lib/recfunctions.py": "fbdd006d65af5453aa5543cb87d2bd35874a507608812132836637e4c9ce5540",
+    "_vendor/numpy/lib/scimath.py": "4f8213cac660aa163527c231c970ad8a81e3313836722fb88b79abf53045d940",
+    "_vendor/numpy/lib/setup.py": "d0ae4d24abaf2af3445a9f845fb8f43838b765042020c1e86f348526adc6ef23",
+    "_vendor/numpy/lib/shape_base.py": "02108ef43132cac13e3fe40917daf252d275821538ff498e461009e7da6839b5",
+    "_vendor/numpy/lib/stride_tricks.py": "6eb6396fed18409b881f609abdfa488a73289724d4bf993d0d4bcba19fa29a2b",
+    "_vendor/numpy/lib/twodim_base.py": "32fce7fcfc928486fd9bb9c98c9e087ad771c262d812c08f1ef2682bb9f6be25",
+    "_vendor/numpy/lib/type_check.py": "fc43ad076f7a9c5625353ef3b416280bfc8af5ac9c21bd0a4e6463bf355d64d8",
+    "_vendor/numpy/lib/ufunclike.py": "fdc78119b18230e777bbf876515cf26912ba658eebca827418907bcea7091b7c",
+    "_vendor/numpy/lib/user_array.py": "2c4f79f3ef82324048dabde5d524319821dd092c3a1d8ebe4615829ddbb3180e",
+    "_vendor/numpy/lib/utils.py": "e8d76579a10b662a8045d8fe102663c6dc0b7f56ea92539c2b8de6f72a1979fb",
+    "_vendor/numpy/linalg/__init__.py": "9a97651175ad4efa45ec89fbefa38d2f0a7a448ca8e14fc62cf4f52f5788267c",
+    "_vendor/numpy/linalg/_umath_linalg.cpython-312-aarch64-linux-gnu.so": "e4b9779f0a6505fc6ec43eb88c69cad899d150914762aa549256c1331b991377",
+    "_vendor/numpy/linalg/lapack_lite.cpython-312-aarch64-linux-gnu.so": "99dc6cd88ce6198d93446a761a01c518ade30eaa9b911a3047af5e92fcd03eb8",
+    "_vendor/numpy/linalg/linalg.py": "90354ad460716d48e5460c570a811f911266f32acdaf522eee1327dab28af111",
+    "_vendor/numpy/ma/API_CHANGES.txt": "17fe235bc5f971805bce9730b5eca69289d39afce028a636906ac717502d9eb2",
+    "_vendor/numpy/ma/LICENSE": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+    "_vendor/numpy/ma/README.rst": "abe802b19e02c3f814186bc48e8839e7ab09507226f164c0c2414ae509f3f570",
+    "_vendor/numpy/ma/__init__.py": "7603f459d9cea69876f0577a522aa8c832a17eb72dd07e905aa6c27044ec93a3",
+    "_vendor/numpy/ma/core.py": "e0c82555126d990f7f88855a4366fefd59b0d538c0844b0c25db4a3a1c811574",
+    "_vendor/numpy/ma/extras.py": "302ed03d2df83c2e30c4d6cea7ba53cb9edda85f41f8be8bd4a308eabadf7b6c",
+    "_vendor/numpy/ma/mrecords.py": "75e81de9d2da0c4bc458d1e6bd29d4657a2cd5cb08cdaaa347f8c0bad9bc25f2",
+    "_vendor/numpy/ma/setup.py": "32a98c89caffc479001a81be4fb349e1875464824b3b8645a7a0261090e5ca1c",
+    "_vendor/numpy/ma/testutils.py": "450c344724bb84e4954e4e0aac21a57aad151e59c3ab3c3068bb6e65b444e3f2",
+    "_vendor/numpy/ma/timer_comparison.py": "a48192646faa6186254564938333e5c8200835b18a857ad9ac364106388cd3cd",
+    "_vendor/numpy/matrixlib/__init__.py": "04706940aa10bf81234f452958103e0a4e0be4eb0ca9323622e636e29fae7179",
+    "_vendor/numpy/matrixlib/defmatrix.py": "2577491a6d4b6b238e5df2a9a7b39565f6f4a73ccfe0bc21e39b1326b95e00b7",
+    "_vendor/numpy/matrixlib/setup.py": "d6bec946448ce07c95a2b82d8e82891962dc39c3cedf09af8afa5e12c56d0048",
+    "_vendor/numpy/polynomial/__init__.py": "6eb68b87accfd90c2e34a44a01a646742fea29667eb4995cdc137cdcb7ae13fd",
+    "_vendor/numpy/polynomial/_polybase.py": "6049e743095381b9f77720fcf6e7ab694c799f1c77c7fa47e8aea69b2126862f",
+    "_vendor/numpy/polynomial/chebyshev.py": "35908a8c86e5717f7d7e8a99ca9e758b4febf29d2bd55295199166435fff9049",
+    "_vendor/numpy/polynomial/hermite.py": "b7908533ea84e2db33609890677d3555c327ec833aef2dab5193c53ed9d54407",
+    "_vendor/numpy/polynomial/hermite_e.py": "8d14777fc3ad87ca68576231f1cd1e2c4411dd465aaf2fb646ea4eac400450c6",
+    "_vendor/numpy/polynomial/laguerre.py": "99c570d1c916557fa4cc9d5022175cbaec733e3b85980de99502e496840c3983",
+    "_vendor/numpy/polynomial/legendre.py": "c23b6015a8e62846d8912524def5920af78c1c33fa53298adbc6cd524e0ebf4b",
+    "_vendor/numpy/polynomial/polynomial.py": "5ec6993c798b18916aa49b3bacfbcee44d25a164352f76072c85326d5bb8754f",
+    "_vendor/numpy/polynomial/polyutils.py": "5f2e6a8ddae39d16aa4a50a51b544e9b059c70b9003c2ec870768d24bbe109fe",
+    "_vendor/numpy/polynomial/setup.py": "75741fcd550c3fd39c07a88abf9ca8d462c4c05077809e3ca61220a3837e78cd",
+    "_vendor/numpy/random/LICENSE.md": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+    "_vendor/numpy/random/__init__.py": "f354e19dec60e6e98de566700f94d1cb335cd98a7e775e01e940bb3418152a1f",
+    "_vendor/numpy/random/_bounded_integers.cpython-312-aarch64-linux-gnu.so": "35db8e1632664b5d0a303a300a692fe6483e438fea29f72619560045e680d08d",
+    "_vendor/numpy/random/_common.cpython-312-aarch64-linux-gnu.so": "4849fef43f45ddd0141b65e0e9aa23edd715b1a5165c33eb8aa2343b4c432382",
+    "_vendor/numpy/random/_generator.cpython-312-aarch64-linux-gnu.so": "d9335b9d8d9ddc626f79489c204d64ed66f9f69e6564e3222ff58a423ae869f6",
+    "_vendor/numpy/random/_mt19937.cpython-312-aarch64-linux-gnu.so": "0af9434b8e6ade0910dd8462d916cfc2843c1327d8413f07863a3a02de0259ec",
+    "_vendor/numpy/random/_pcg64.cpython-312-aarch64-linux-gnu.so": "377ff9e07d6f6eac376831f7b7ac140b85c6b6f64c0de3983bb389a897c44d41",
+    "_vendor/numpy/random/_philox.cpython-312-aarch64-linux-gnu.so": "6c266b05e962dff343cb30286d5a664e46c14423a11c2bf6078ca301827b4f22",
+    "_vendor/numpy/random/_pickle.py": "e0d85d4feca4ec2d26dedc995a6a2e600b3764634f74f54d19f508cae87c1c36",
+    "_vendor/numpy/random/_sfc64.cpython-312-aarch64-linux-gnu.so": "37991f0bff1453936f3fadec247d6fab642b5fb47146cfa9fa2c0db1ecc3e6a4",
+    "_vendor/numpy/random/bit_generator.cpython-312-aarch64-linux-gnu.so": "0e862d594b5296ffd1a1962e47a148096e27f13ab3d41bdbe8ebf201af341aa9",
+    "_vendor/numpy/random/mtrand.cpython-312-aarch64-linux-gnu.so": "d0111cfd58a0213b20ca8a68177f5b239cd217126abc2d6378435b4080dcbe18",
+    "_vendor/numpy/testing/__init__.py": "227a552a80c0ccc28efe5fc735c6adce25bfbb593dfc96737bffedda7c9bacbd",
+    "_vendor/numpy/testing/overrides.py": "bba7dc292042f0723330f58a01b772a3053bd61d85c767a40d0c691b936122bf",
+    "_vendor/numpy/testing/print_coercion_tables.py": "9ddc4eb12e177eb678518ffd9ea4530a7c6193381da9cb941cbf277b377b3a9e",
+    "_vendor/numpy/testing/setup.py": "18f280b534c146c356e24991ecd8cfea698147f193769693be44e6d74fd570b8",
+    "_vendor/numpy/typing/__init__.py": "5684c82cd0eb516bd9c742caf7ff7b9412d014ab521a60ede102ce1fccd8be5a",
+    "_vendor/numpy/typing/mypy_plugin.py": "db8cd5938122dea1f81dcdd24b3defd17b48b32713a3c1caa18ea296107fec04",
+    "_vendor/numpy/typing/setup.py": "0a7cfdab9df0faf24dc84eaf631a98bd05f1d2925bac6f6ab87cb3f6cab17de9",
+    "_vendor/numpy/testing/_private/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "_vendor/numpy/testing/_private/extbuild.py": "9c6d9dc0fe27526412ddee5e2118a7c6dd2cfdfe2cc7103561fa210a0fa76afa",
+    "_vendor/numpy/testing/_private/utils.py": "dc5ad24cc8b439da43383043a27720883433768e4d280e9855f437b8a4524277",
+    "_vendor/numpy/random/_examples/cffi/extending.py": "c5295adf35aac62e878f8f04be761f0f75877c4d7cf55bc2e17b0abb8fd3fc8c",
+    "_vendor/numpy/random/_examples/cffi/parse.py": "0676fbb7fe92fdce7eddd66b43e5d7f446b338a85fb547dc09e8d75d6c9dd445",
+    "_vendor/numpy/random/_examples/numba/extending.py": "229cb37a5fe1e6253f0cc27fbe75d48100b7f2e303327eda754a5649e1102c51",
+    "_vendor/numpy/random/_examples/numba/extending_distributions.py": "267afd696907c885b280d6dd69edf61955112bee53f414c686e131469bef7bdf",
+    "_vendor/numpy/f2py/_backends/__init__.py": "eff6c0edcff10e92dce3ff2f3df1f7dbe2f19fd7dc513823436e6caddbf0bc03",
+    "_vendor/numpy/f2py/_backends/_backend.py": "18a6fdf94685b334f4e39bd4815ba43ecd67f7b8b2ca3a9a86b58ac4b38a358a",
+    "_vendor/numpy/f2py/_backends/_distutils.py": "a718766144456184b29083af045c15be1a0d5f5a1293e737d083cf873964a3ed",
+    "_vendor/numpy/f2py/_backends/_meson.py": "822fa76e73c50c2dfcb2e99f02383e43914fbba9cd9324174e312e55ff56f427",
+    "_vendor/numpy/core/lib/npy-pkg-config/mlib.ini": "fcbb16575792b4dab085d8983dadb9dfc18be3a7677d5c13e0cac8d736eca05c",
+    "_vendor/numpy/core/lib/npy-pkg-config/npymath.ini": "91a99436b60a0265ea41af0170dbfb0f9b0ba8787a6e70a1334ff9ad90ac4df6",
+    "_vendor/numpy/core/include/numpy/random/LICENSE.txt": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec"
+  },
+  "elf": [
+    {
+      "path": "libgrainbrick_comp.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "4e13b223fd880dc8aad8e6b5e1d48733e04a4e6b412b3abe6ec2124c6c4591f5"
+    },
+    {
+      "path": "libgrainbrick_eq.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "daae93a54a3ef9d0f78bcf3c503bc2a368a718965a8afa053220ceb1236c47d0"
+    },
+    {
+      "path": "libgrainbrick_fullopt.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "f5956f0f9aa19235928c1a5b577808d469f5bc40e2638694c1e085589eac71f7"
+    },
+    {
+      "path": "libgrainbrick_fullopt_s2.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "160fa1a70b06261db9418ba1938ea2239cfdf4d0138726484dbc8d1050a022ad"
+    },
+    {
+      "path": "libgrainbrick_fx.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "221301ee70fc0c69a9c1e6cbdd36d12737d4d6c99550b472b0b06e9d1b821e72"
+    },
+    {
+      "path": "libgrainbrick_fx_fo2.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "44af9b95a13d02d285e19a0449662cf85efe11b39e9bf2d632c386e92383c3df"
+    },
+    {
+      "path": "libgrainbrick_granular.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "84a45f76b1af2dcaf85a3049efc6058a78bdfcd8d87916bfbbcce39ea6d9847b"
+    },
+    {
+      "path": "libgrainbrick_granular_live.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "4477e5058d704049312ccd3e77c002bf46f280f5e118be5217368233c735cb37"
+    },
+    {
+      "path": "libgrainbrick_granular_live_fo1.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "827717767c3b9d82947998d8eeecb24ca87cf7acfe008e8bcffae9cf828b3c00"
+    },
+    {
+      "path": "libgrainbrick_live.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "0ac3a229a16a17ce763fb815b4c9997e6d67f2b00de4af262ba936e3a102527b"
+    },
+    {
+      "path": "libgrainbrick_orbix.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "c4527bdc53ca5ed5eb1c4683de0b0c72d67e0c6db4f69f12a242389d0314162f"
+    },
+    {
+      "path": "libgrainbrick_orbix_fo2.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "c378e3123785d02a817e0ed45ddcacb82bb787a4809c05d243dd4d77cbc884f0"
+    },
+    {
+      "path": "libgrainbrick_orbix_rev23.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "be7476b18d28c48cc59b495f405b3cc64fe64d003fe7c44ee4bbdf9841071e4c"
+    },
+    {
+      "path": "libgrainbrick_oscillator.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "20275080c46cf1dbd2669953cbe489b80da8e4c4162e0d7af577dc76f5a1a736"
+    },
+    {
+      "path": "libgrainbrick_resonator.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "136dbceb25fdd0bc9304ee14c9ca94eb5dbbc9016a74b8ac1a4c4d396900d7e1"
+    },
+    {
+      "path": "libgrainbrick_shimmer_native.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "db85d95dbc76f3f1a74891c3f1a64066c7d2fe6d70764f3980b9039ac2008410"
+    },
+    {
+      "path": "libgrainbrick_shimmer_voice2.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "f16e2b8d9194c0b6af458e805e66007c286e9f09054edc130ce79ca188bb5d07"
+    },
+    {
+      "path": "libgrainbrick_shimmer_voice2_fo1.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "0db4a502ee3e9b10aa95ebbd792737bc3124902794fba6dc046cc362f0ab5c9d"
+    },
+    {
+      "path": "libgrainbrick_soundtouch.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "59ac8ab8d2397a1e6d4f03a50af3a4d571108a1dcc3906ac148e1cd5b7e603fe"
+    },
+    {
+      "path": "libgrainbrick_stretch.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "500dfafeff20cdd3c0760df60a65bbe7281ba6a6592fcefcd53f479bbac74abd"
+    },
+    {
+      "path": "libgrainbrick_tape.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "174dfbf9d0cc8bcbb05c4a234c0c95e50ee719c03598a7f492eaa1edcceca9e7"
+    },
+    {
+      "path": "libSoundTouch.so.1",
+      "class": 64,
+      "machine": 183,
+      "sha256": "b2bf0b42977262c55e0fda65ccfdcd956ba4d4e6a2c5a6266e43b50031fc32d3"
+    },
+    {
+      "path": "claude_gfx/libgb_claude_smoothscale.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "a27e816f66fc88bf3c5d2d164d64e21b876e98048e9cd42308dd3cf18e295515"
+    },
+    {
+      "path": "visualizers/native/gb_mandala_aarch64.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "65306718e9685e7ffc7c1c7b01dc6ec684336064f58eef1ba4c033ed2079902e"
+    },
+    {
+      "path": "visualizers/native/gb_mandala_x86_64.so",
+      "class": 64,
+      "machine": 62,
+      "sha256": "ce4e69378877f6360e2c9dbe23f275ba500b91a1e468218e1caa3aafcb5deabe"
+    },
+    {
+      "path": "native/live/libgrainbrick_live.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "0ac3a229a16a17ce763fb815b4c9997e6d67f2b00de4af262ba936e3a102527b"
+    },
+    {
+      "path": "_vendor/numpy.libs/libgfortran-daac5196.so.5.0.0",
+      "class": 64,
+      "machine": 183,
+      "sha256": "73b06dc7d12c5d4e37fe8ba67aa9ab440bb794e79adff58ae894b3d457e71bd7"
+    },
+    {
+      "path": "_vendor/numpy.libs/libopenblas64_p-r0-17488984.3.23.dev.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "37bbe4b1cbc29e5c68a3df2d3cfcc5aac97ee66c856f40fabedea760cc3b452a"
+    },
+    {
+      "path": "_vendor/numpy/core/_multiarray_tests.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "64de1dfda91ac4d80ff7d2e28b8a192d13d0d8a4b7271badcea8506fb8ffaa3e"
+    },
+    {
+      "path": "_vendor/numpy/core/_multiarray_umath.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "fb1837bd38404656b3030d6945c4bceb253d6b308a0e45058af58de4b0725cf0"
+    },
+    {
+      "path": "_vendor/numpy/core/_operand_flag_tests.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "210c08e9d145b3c7c50adf89a3e4d205147543e6458e5de9876d9926702aa750"
+    },
+    {
+      "path": "_vendor/numpy/core/_rational_tests.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "814472fb44c505dc045ef954433fd1e347f430f813a277ebf204f16411ddb06d"
+    },
+    {
+      "path": "_vendor/numpy/core/_simd.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "cd6af2f0ed8ff28091b46e478fa8e7466c19c460f673ea96867aa6b1208ad50c"
+    },
+    {
+      "path": "_vendor/numpy/core/_struct_ufunc_tests.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "f6d5c82e17cf16bc68506cff8560d200bcb26f42137118870bdac5a5cfa9db20"
+    },
+    {
+      "path": "_vendor/numpy/core/_umath_tests.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "eb5815836104baaed816e92dff9fdf5c737a313b50e21f02338ba274833ad47c"
+    },
+    {
+      "path": "_vendor/numpy/fft/_pocketfft_internal.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "0811c4b82f88a7ddf277553bbb4fa0c0998990141925c27cc8972ea04e02e65a"
+    },
+    {
+      "path": "_vendor/numpy/linalg/_umath_linalg.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "e4b9779f0a6505fc6ec43eb88c69cad899d150914762aa549256c1331b991377"
+    },
+    {
+      "path": "_vendor/numpy/linalg/lapack_lite.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "99dc6cd88ce6198d93446a761a01c518ade30eaa9b911a3047af5e92fcd03eb8"
+    },
+    {
+      "path": "_vendor/numpy/random/_bounded_integers.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "35db8e1632664b5d0a303a300a692fe6483e438fea29f72619560045e680d08d"
+    },
+    {
+      "path": "_vendor/numpy/random/_common.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "4849fef43f45ddd0141b65e0e9aa23edd715b1a5165c33eb8aa2343b4c432382"
+    },
+    {
+      "path": "_vendor/numpy/random/_generator.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "d9335b9d8d9ddc626f79489c204d64ed66f9f69e6564e3222ff58a423ae869f6"
+    },
+    {
+      "path": "_vendor/numpy/random/_mt19937.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "0af9434b8e6ade0910dd8462d916cfc2843c1327d8413f07863a3a02de0259ec"
+    },
+    {
+      "path": "_vendor/numpy/random/_pcg64.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "377ff9e07d6f6eac376831f7b7ac140b85c6b6f64c0de3983bb389a897c44d41"
+    },
+    {
+      "path": "_vendor/numpy/random/_philox.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "6c266b05e962dff343cb30286d5a664e46c14423a11c2bf6078ca301827b4f22"
+    },
+    {
+      "path": "_vendor/numpy/random/_sfc64.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "37991f0bff1453936f3fadec247d6fab642b5fb47146cfa9fa2c0db1ecc3e6a4"
+    },
+    {
+      "path": "_vendor/numpy/random/bit_generator.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "0e862d594b5296ffd1a1962e47a148096e27f13ab3d41bdbe8ebf201af341aa9"
+    },
+    {
+      "path": "_vendor/numpy/random/mtrand.cpython-312-aarch64-linux-gnu.so",
+      "class": 64,
+      "machine": 183,
+      "sha256": "d0111cfd58a0213b20ca8a68177f5b239cd217126abc2d6378435b4080dcbe18"
+    }
+  ],
+  "python_imports": {
+    "main.py": [
+      "array",
+      "atexit",
+      "claude_gfx",
+      "engine",
+      "fcntl",
+      "gc",
+      "numpy",
+      "os",
+      "pygame",
+      "re",
+      "subprocess",
+      "tempfile",
+      "threading",
+      "time",
+      "traceback",
+      "ui",
+      "unicodedata",
+      "visualizers",
+      "wave"
+    ],
+    "claude_gfx/__init__.py": [],
+    "claude_gfx/native_scale.py": [
+      "ctypes",
+      "os"
+    ],
+    "claude_gfx/opt.py": [
+      "claude_gfx",
+      "collections",
+      "math",
+      "numpy",
+      "os",
+      "pygame",
+      "time",
+      "ui"
+    ],
+    "effects/__init__.py": [],
+    "engine/__init__.py": [],
+    "engine/alsa_live_fx31.py": [
+      "ctypes",
+      "numpy",
+      "os"
+    ],
+    "engine/alsa_live_fx33.py": [
+      "ctypes",
+      "engine",
+      "numpy",
+      "os",
+      "struct",
+      "threading",
+      "time"
+    ],
+    "engine/alsa_live_fx35.py": [
+      "ctypes",
+      "engine",
+      "gc",
+      "json",
+      "numpy",
+      "os",
+      "time"
+    ],
+    "engine/app_paths.py": [
+      "os"
+    ],
+    "engine/audio.py": [
+      "fcntl",
+      "numpy",
+      "subprocess",
+      "time"
+    ],
+    "engine/audio_denoise.py": [
+      "__future__",
+      "numpy",
+      "os",
+      "pathlib",
+      "tempfile",
+      "wave"
+    ],
+    "engine/audio_devices.py": [
+      "os",
+      "re"
+    ],
+    "engine/audio_editor.py": [
+      "__future__",
+      "array",
+      "os",
+      "pathlib",
+      "tempfile",
+      "wave"
+    ],
+    "engine/audio_inputs.py": [
+      "__future__",
+      "pathlib",
+      "re"
+    ],
+    "engine/audio_recorder.py": [
+      "__future__",
+      "engine",
+      "errno",
+      "json",
+      "numpy",
+      "os",
+      "pathlib",
+      "queue",
+      "signal",
+      "subprocess",
+      "sys",
+      "threading",
+      "time",
+      "wave"
+    ],
+    "engine/audio_worker.py": [
+      "engine",
+      "math",
+      "multiprocessing",
+      "numpy",
+      "os",
+      "threading",
+      "time",
+      "traceback"
+    ],
+    "engine/autokey.py": [
+      "os",
+      "pygame",
+      "re",
+      "types"
+    ],
+    "engine/ble_midi.py": [
+      "collections",
+      "dbus",
+      "gi",
+      "logging",
+      "threading",
+      "time"
+    ],
+    "engine/ble_midi_manager.py": [
+      "collections",
+      "dbus",
+      "engine",
+      "gi",
+      "json",
+      "os",
+      "re",
+      "threading",
+      "time"
+    ],
+    "engine/ble_midi_menu.py": [],
+    "engine/button_mapping.py": [
+      "engine",
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "engine/compressor_c.py": [
+      "ctypes",
+      "engine",
+      "math",
+      "numpy"
+    ],
+    "engine/control.py": [
+      "engine",
+      "math"
+    ],
+    "engine/cpu_performance.py": [
+      "os",
+      "pathlib",
+      "subprocess",
+      "sys"
+    ],
+    "engine/dsp_chain.py": [
+      "ctypes",
+      "engine",
+      "numpy",
+      "struct"
+    ],
+    "engine/elastic_varispeed_pitch.py": [
+      "ctypes",
+      "engine",
+      "numpy"
+    ],
+    "engine/eq_c.py": [
+      "ctypes",
+      "engine",
+      "numpy"
+    ],
+    "engine/eq_math.py": [
+      "math",
+      "numpy"
+    ],
+    "engine/fullopt.py": [
+      "ctypes",
+      "engine",
+      "os"
+    ],
+    "engine/fx_c.py": [
+      "ctypes",
+      "engine",
+      "math",
+      "numpy"
+    ],
+    "engine/gb_diagnostics.py": [
+      "__future__",
+      "json",
+      "os",
+      "pathlib",
+      "platform",
+      "shutil",
+      "struct",
+      "time",
+      "wave",
+      "zipfile"
+    ],
+    "engine/gb_fx_profiler.py": [
+      "__future__",
+      "engine",
+      "os",
+      "threading",
+      "time"
+    ],
+    "engine/gb_usb_record_fx35.py": [
+      "__future__",
+      "argparse",
+      "ctypes",
+      "engine",
+      "json",
+      "numpy",
+      "os",
+      "pathlib",
+      "queue",
+      "select",
+      "signal",
+      "subprocess",
+      "sys",
+      "threading",
+      "time",
+      "wave"
+    ],
+    "engine/grain2.py": [
+      "ctypes",
+      "engine"
+    ],
+    "engine/grain3.py": [
+      "hashlib",
+      "json",
+      "os",
+      "time"
+    ],
+    "engine/granular_c.py": [
+      "ctypes",
+      "engine",
+      "math",
+      "numpy"
+    ],
+    "engine/input.py": [
+      "engine",
+      "pygame",
+      "time"
+    ],
+    "engine/live_input.py": [
+      "ctypes",
+      "engine",
+      "multiprocessing",
+      "numpy",
+      "os",
+      "subprocess"
+    ],
+    "engine/midi_learn.py": [
+      "collections",
+      "engine",
+      "json",
+      "math",
+      "os",
+      "re",
+      "time"
+    ],
+    "engine/midi_target.py": [],
+    "engine/native_ptr.py": [],
+    "engine/orbix_c.py": [
+      "ctypes",
+      "engine",
+      "numpy",
+      "os"
+    ],
+    "engine/orbix_res_control.py": [
+      "engine",
+      "math"
+    ],
+    "engine/orbix_res_integration.py": [
+      "engine",
+      "json",
+      "os",
+      "ui"
+    ],
+    "engine/orbix_res_presets.py": [
+      "engine",
+      "json",
+      "os",
+      "re",
+      "time"
+    ],
+    "engine/orbix_resonator.py": [],
+    "engine/orbix_reverb_fx23.py": [
+      "ctypes",
+      "engine",
+      "math",
+      "numpy",
+      "os"
+    ],
+    "engine/osc_c.py": [
+      "ctypes",
+      "engine",
+      "os",
+      "time"
+    ],
+    "engine/osc_integration.py": [
+      "engine",
+      "json",
+      "ui"
+    ],
+    "engine/osc_ui_control.py": [
+      "engine"
+    ],
+    "engine/oscillator_fx.py": [
+      "engine",
+      "json",
+      "os"
+    ],
+    "engine/param_snapshot.py": [],
+    "engine/parameters.py": [
+      "engine"
+    ],
+    "engine/project_manager.py": [
+      "engine",
+      "json",
+      "os",
+      "pathlib",
+      "re"
+    ],
+    "engine/record_integrity.py": [
+      "__future__",
+      "array",
+      "os",
+      "pathlib",
+      "struct",
+      "sys",
+      "wave"
+    ],
+    "engine/sample.py": [
+      "numpy",
+      "os",
+      "shutil",
+      "struct",
+      "subprocess",
+      "tempfile",
+      "wave"
+    ],
+    "engine/sample_actions_fx27.py": [
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "engine/sample_browser.py": [
+      "os"
+    ],
+    "engine/sample_preview.py": [
+      "os",
+      "shutil",
+      "subprocess",
+      "time"
+    ],
+    "engine/shimmer_native.py": [
+      "ctypes",
+      "engine",
+      "numpy"
+    ],
+    "engine/shimmer_native_voice2.py": [
+      "ctypes",
+      "engine",
+      "numpy"
+    ],
+    "engine/sound_state.py": [
+      "engine",
+      "json",
+      "os"
+    ],
+    "engine/tab_navigation_fx29.py": [],
+    "engine/tape_c.py": [
+      "ctypes",
+      "engine",
+      "numpy"
+    ],
+    "engine/temp_snapshot.py": [
+      "copy",
+      "engine",
+      "time"
+    ],
+    "engine/tempo_app.py": [
+      "atexit",
+      "engine",
+      "json",
+      "os",
+      "time"
+    ],
+    "engine/tempo_clock.py": [
+      "engine",
+      "math",
+      "numpy",
+      "time"
+    ],
+    "engine/tempo_controls.py": [
+      "engine"
+    ],
+    "engine/tempo_detect.py": [
+      "math",
+      "numpy",
+      "os",
+      "re",
+      "threading"
+    ],
+    "engine/tempo_meta.py": [
+      "engine",
+      "json",
+      "os",
+      "time"
+    ],
+    "engine/tempo_shared.py": [
+      "multiprocessing"
+    ],
+    "engine/tempo_stretch.py": [
+      "ctypes",
+      "engine",
+      "glob",
+      "mmap",
+      "numpy",
+      "os",
+      "tempfile",
+      "threading",
+      "time",
+      "zlib"
+    ],
+    "engine/usb_capture_select_fx28.py": [
+      "__future__",
+      "engine",
+      "os",
+      "pathlib",
+      "re",
+      "tempfile"
+    ],
+    "engine/usb_volume.py": [
+      "glob",
+      "os",
+      "re",
+      "struct",
+      "subprocess",
+      "time"
+    ],
+    "ui/__init__.py": [],
+    "ui/anim_time.py": [
+      "pygame"
+    ],
+    "ui/ble_midi_panel.py": [
+      "engine",
+      "pygame"
+    ],
+    "ui/chrome_retain.py": [
+      "os",
+      "pygame"
+    ],
+    "ui/context_info.py": [
+      "engine"
+    ],
+    "ui/display_adapter.py": [
+      "os",
+      "re",
+      "subprocess",
+      "ui"
+    ],
+    "ui/frame_cap.py": [
+      "pygame",
+      "time"
+    ],
+    "ui/frame_scheduler.py": [
+      "os"
+    ],
+    "ui/gfx_profiler.py": [
+      "gc",
+      "os",
+      "pygame",
+      "time",
+      "ui"
+    ],
+    "ui/grain2_ui.py": [
+      "engine",
+      "pygame"
+    ],
+    "ui/orbix_res_editor.py": [
+      "engine",
+      "math",
+      "pygame",
+      "ui"
+    ],
+    "ui/orbix_res_info.py": [
+      "engine",
+      "re",
+      "ui"
+    ],
+    "ui/osc_editor.py": [
+      "engine",
+      "math",
+      "os",
+      "pygame",
+      "struct"
+    ],
+    "ui/osc_info.py": [
+      "engine",
+      "ui"
+    ],
+    "ui/pixel_font.py": [
+      "collections",
+      "math",
+      "os",
+      "pygame"
+    ],
+    "ui/quality_draw.py": [
+      "math",
+      "os",
+      "pygame"
+    ],
+    "ui/render_engine.py": [
+      "collections",
+      "os",
+      "pygame",
+      "time",
+      "traceback",
+      "types",
+      "ui"
+    ],
+    "ui/renderer.py": [
+      "claude_gfx",
+      "engine",
+      "json",
+      "math",
+      "numpy",
+      "os",
+      "pygame",
+      "re",
+      "sys",
+      "time",
+      "ui",
+      "visualizers"
+    ],
+    "ui/rhythm_panel.py": [
+      "engine",
+      "numpy",
+      "pygame",
+      "ui"
+    ],
+    "ui/tape_frame.py": [
+      "os",
+      "pygame"
+    ],
+    "ui/tape_noise.py": [
+      "os",
+      "pygame"
+    ],
+    "ui/tempo_ui.py": [
+      "engine",
+      "pygame"
+    ],
+    "ui/waveform.py": [
+      "bisect",
+      "numpy",
+      "os",
+      "pygame",
+      "ui"
+    ],
+    "visualizers/__init__.py": [],
+    "visualizers/audio_features.py": [
+      "math",
+      "numpy"
+    ],
+    "visualizers/cymatics.py": [
+      "math",
+      "numpy",
+      "pygame",
+      "time"
+    ],
+    "visualizers/fractals.py": [
+      "collections",
+      "math",
+      "numpy",
+      "pygame",
+      "time",
+      "ui"
+    ],
+    "visualizers/ornate_mandala.py": [
+      "ctypes",
+      "json",
+      "math",
+      "numpy",
+      "os",
+      "platform",
+      "pygame",
+      "threading",
+      "time",
+      "zlib"
+    ],
+    "visualizers/particle_field.py": [
+      "math",
+      "pygame",
+      "random",
+      "time"
+    ],
+    "visualizers/solar_orbits.py": [
+      "math",
+      "numpy",
+      "pygame",
+      "time",
+      "ui"
+    ],
+    "visualizers/visual_modes.py": [
+      "collections",
+      "os",
+      "pygame",
+      "time",
+      "visualizers"
+    ],
+    "engine/rhythm/__init__.py": [],
+    "engine/rhythm/app.py": [
+      "engine",
+      "json",
+      "math",
+      "os",
+      "threading",
+      "time"
+    ],
+    "engine/rhythm/clock.py": [
+      "collections",
+      "engine",
+      "glob",
+      "os",
+      "re",
+      "select",
+      "threading",
+      "time"
+    ],
+    "engine/rhythm/controls.py": [
+      "engine"
+    ],
+    "engine/rhythm/integration.py": [
+      "engine",
+      "ui"
+    ],
+    "engine/rhythm/midi_out.py": [
+      "engine",
+      "errno",
+      "math",
+      "os",
+      "threading",
+      "time"
+    ],
+    "engine/rhythm/model.py": [
+      "random"
+    ],
+    "engine/rhythm/native.py": [
+      "ctypes",
+      "engine",
+      "time"
+    ],
+    "engine/rhythm/sample_meta.py": [
+      "struct"
+    ],
+    "engine/rhythm/sequencer.py": [
+      "engine",
+      "math"
+    ],
+    "engine/rhythm/shared.py": [
+      "engine",
+      "multiprocessing"
+    ],
+    "engine/rhythm/slicer.py": [
+      "engine",
+      "numpy"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+# SPDX-License-Identifier: GPL-3.0-only
+name: Build and verify
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+jobs:
+  host:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build libsdl2-dev
+      - run: python3 scripts/maintenance/check_source.py
+      - run: python3 scripts/maintenance/check_docs.py
+      - run: sh scripts/build.sh host-debug
+      - run: sh scripts/build.sh host-asan-ubsan
+      - run: python3 tests/runtime_test.py
+      - run: python3 tests/tooling_test.py
+      - run: python3 tests/hardware_tools_test.py
+      - run: python3 tests/source_archive_test.py
+      - run: python3 tests/release_test.py
+  cross:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build pkg-config
+      - run: python3 scripts/maintenance/check_source.py
+      - run: python3 scripts/maintenance/check_docs.py
+      - run: python3 scripts/toolchain/fetch_sdk.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: GRAINMM_SDK="$PWD/.local/sdk/miyoomini-toolchain" sh scripts/build.sh miyoo-armv7-release
+      - name: Package versioned installation and verify reproducibility
+        run: |
+          version=$(python3 -c 'import json; print(json.load(open("packaging/release.json"))["version"])')
+          python3 scripts/packaging/package.py --release-version "$version"
+          python3 scripts/packaging/package.py --release-version "$version" --output "build/repeated.zip"
+          cmp "dist/GrainMM-$version-miyoo-mini-plus.zip" build/repeated.zip
+          python3 scripts/packaging/source_archive.py --version "$version"
+          python3 scripts/packaging/source_archive.py --version "$version" --output build/source-repeat.tar.gz
+          cmp "dist/GrainMM-$version-source.tar.gz" build/source-repeat.tar.gz
+          python3 scripts/packaging/package.py --validate "dist/GrainMM-$version-miyoo-mini-plus.zip"
+          python3 scripts/packaging/verify_release.py --version "$version"
+      - run: python3 tests/tooling_test.py
+      - run: python3 tests/hardware_tools_test.py
+      - run: python3 tests/source_archive_test.py
+      - run: python3 tests/release_test.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: miyoo-package-${{ github.sha }}
+          path: |
+            dist/GrainMM-*-miyoo-mini-plus.zip
+            dist/GrainMM-*-miyoo-mini-plus.zip.sha256
+            dist/GrainMM-*-source.tar.gz
+            dist/GrainMM-*-source.tar.gz.sha256
+          if-no-files-found: error
+          retention-days: 14

@@ -1,84 +1,120 @@
 # Troubleshooting
 
-## GrainMM does not appear in Apps
+## GrainMM does not appear or closes immediately
 
-Check that you downloaded the **GrainMM-…-miyoo-mini-plus.zip** installation,
-not a Source code archive. On the SD card, `config.json` must be directly inside
-`App/GrainMM`. Extra enclosing folders prevent Onion from finding the app.
-GrainMM targets Miyoo Mini Plus with OnionOS; other models are untested.
+Use the installation ZIP, not a source archive. Check for
+`App/GrainMM/config.json` without an extra folder. Target: Miyoo Mini Plus with
+OnionOS; other models are untested. Use the prerelease installation ZIP linked from the [user guide](../README.md).
 
-## It closes immediately
+If it closes, keep `state/session.log` and `state/session.previous.log` before
+retrying. They record the startup error. Follow the [fresh installation/update
+procedure](INSTALLATION.md#update-without-losing-your-sounds). Do not replace Onion
+libraries or change audio configuration to work around an error.
 
-Keep `App/GrainMM/state/session.log` and `session.previous.log`. They record the
-startup error. Include the relevant error in a bug report after removing personal
-filenames. Try a fresh installation using the [backup/update steps](INSTALLATION.md).
-Do not replace Onion libraries or change its audio configuration.
+## No sound, or an effect does nothing
 
-## There is no sound
+Press A: launch, loading and reopening start paused. Check device listening volume.
+Browser A loads; press A again afterward to play. In a patch dialog, A loads a
+patch instead of playing. Return to the main controls.
 
-Playback starts paused. Press **A** and check the Miyoo's listening volume.
-In the browser, **A** loads a file; press **A** again after loading to play.
-Closing the browser also returns paused. Without a sample, A plays a quiet test
-tone. Sparse grains are quiet; raise gain gradually at a low listening volume.
-Delay is initially dry: raise its MIX control to hear echoes.
+With no WAV and all built-in sources disabled, the quiet fallback tone bypasses
+FX. Raise OSC/LEVEL to 0.05 or enable another musical source to hear effects.
+Most effects start dry: raise MIX gradually. COMP can reduce volume; begin with
+mix zero and modest gains. RHYTHM needs TREMOLO or AUTO PAN above zero.
 
-## The oscillator or compressor seems silent
+TIMBRE/TABLE MIX changes OSC A's color but needs OSC/LEVEL above zero. OSC B is
+independent; TIMBRE does not color it. SUB LEVEL can play on its own. SCAN DEPTH
+needs a nonzero SCAN HZ for movement. GROOVE needs an enabled WAV slice source;
+it does not swing drones, balls, ordinary grains or rhythm FX.
 
-The built-in source at OSC/LEVEL0 is the quiet test tone and bypasses effects.
-Raise OSC/LEVEL to0.05 for musical synthesis, then press A. Loading a WAV or
-closing the browser always returns paused. GRAIN/MOTION/SAMPLE require a WAV; other pages
-can process the musical oscillator. Compression can reduce volume substantially;
-start with COMP/MIX0 and modest EQ/gain settings.
+The built-in speaker cannot reveal stereo panning. For distortion, lower source
+levels, EQ/makeup boosts or OUTPUT gain. Enable the optional OUTPUT limiter and
+listen at low volume. It is a sample-peak limiter, not a true-peak guarantee.
 
-## My sample is missing or will not load
+## A WAV is missing or will not load
 
-Place your own short **16-bit PCM WAV** in `App/GrainMM/state/` or a subfolder.
-Use **Y** to browse, **A** to open/load and **B** to go back. MP3, 24-bit and float
-WAV are unsupported. Check [format and size limits](PARAMETERS.md).
-Hidden files, links and non-WAV files are not listed. Split a large sample folder
-into smaller subfolders if GrainMM reports a listing limit.
+Use your own short **16-bit PCM WAV**, mono/stereo, 8–96 kHz, beneath `state`.
+The decoded limit is 16 MiB: about 43 seconds stereo at 48 kHz. MP3, 24-bit/float
+WAV, hidden files and links are unsupported. Large folders can hit listing limits;
+split them into smaller subfolders. Loading failure keeps the prior sound.
 
-A missing saved sample leaves the app paused with an error. Its stored selection
-is preserved until you choose another source. Restore the WAV to its original
-location, or use Y to choose a different sound. X inside the browser selects the
-test tone without deleting any files.
+A missing saved sample remains selected. Restore its original relative location,
+choose another with Y, or choose built-in with Y then X. Patches store paths, not
+copies. A 60-second stereo export cannot be loaded back; choose 5/15/30 seconds.
 
-## Settings cannot be saved or restored
+## Settings or patches cannot save
 
-Use **MENU** to save and exit; power interruption can lose unsaved edits.
-If a saved file is malformed, GrainMM reports an error and preserves it. With the
-app closed and the SD card on your computer, back up the entire `state` folder.
-Move `parameters.v8` into that backup to use older v7/v6/v5/v4/v3/v2/v1 settings. Move all eight
-versioned files into backup to start with defaults. Your WAVs are independent.
+MENU saves ordinary settings on normal exit. Power interruption can lose unsaved
+edits. Back up the **whole state folder** with the app closed before recovery.
 
-An interrupted save may leave `parameters.v8.pending` (or an older version's
-pending file). The previous committed settings remain usable. Move the pending
-file into backup before saving again. GrainMM never promotes or deletes it
-automatically. Check available SD space if saves keep failing.
+Current settings use `parameters.v18`. If it is malformed, move that exact file
+into your backup to allow the newest remaining v1–v17 file to load. To start from
+defaults, move all versioned parameter files aside. Preserve your WAVs/patches.
+A corrupt newer file is never silently ignored in favor of an older one.
 
-## New effects seem to do nothing
+An interrupted save can leave `parameters.v18.pending` (or an older pending
+transaction). The previous committed settings remain. Move the pending file to
+your backup before retrying; it is never automatically promoted or deleted.
+Check SD free space and filesystem health if failures continue.
 
-RESONATE starts with MIX0; raise MIX gradually and try a harmonically rich WAV or
-saw oscillator. RHYTHM starts with both TREMOLO and AUTO PAN0; raise either depth.
-The safe fallback test tone bypasses the effects. SAMPLE applies only to WAVs.
-ATTACK/RELEASE shape new grains when ENV BLEND is above0; old grains finish first.
-SELECT opens contextual help. MENU always exits, including from help or the browser.
+START opens patch slots. X saves; replacing a used slot requires a second separate
+X press. Y edits a draft name; it does not rename until saved. A loads, B/START
+closes. Failed patch saves preserve old committed files and may leave
+`state/patches/patch-NN.gmm.pending`; back up and move that exact pending file
+aside. A schema18 patch needs the new build. Restore a full old state backup to
+use older builds. Color recovery follows the same rule for `theme.v1.pending`.
 
-## A patch cannot save or load
+## Patterns or harmony sound unexpected
 
-Use START to open patches, Y to choose a draft name and X to save the current
-sound. For an occupied slot, release and press X again to confirm. A loads a
-saved patch and returns paused; B/START closes the dialog. Save settings with
-MENU separately. An unsaved name is only a draft, not a renamed file.
+PATTERN's Y switches MANUAL/GENERATED; edits select MANUAL automatically. Manual
+steps keep their region/reverse/chance settings. GROOVE then changes traversal:
+check STEPS, ROTATE, STEP ORDER and ACCENT if some stored steps are not heard.
+ACCENT 100% silences the non-accented steps. GATE/trim/pitch can make very short
+slices silent. Stop/play restarts phrase position and accents.
 
-A missing/invalid WAV leaves the previous sound intact. Restore the WAV at its
-saved relative path or load another patch. A failed patch save preserves the
-old committed file and may leave `state/patches/patch-NN.gmm.pending`. Back up
-state, then move that pending file aside before retrying; do not delete it blindly.
+HARMONY needs grains from a WAV, with SLICE off. It does not detect key or retune
+oscillators. Tune tonal samples by ear. CHANCE zero keeps the transposed root.
+Extreme pitch changes can alias with current linear sample interpolation.
 
-## The waveform looks flat or does not follow effects
+The waveform is cached input peaks, not processed output. It will not follow FX.
+Use trim controls to change the bright region; the WAV remains intact.
 
-The view shows cached input peaks. It does not visualize processed output.
-Silent/very short files may look flat. The bright region is selected. Use up/down
-to select START/END or another SAMPLE control, then left/right to change it.
-The source is scanned once when loaded; audio keeps running while trim is edited.
+## Controls, snapshots and colors
+
+X opens modules; it does not cycle pages. SOURCE has two banks: keep moving down
+for OSC B and TIMBRE. L/R changes groups in modules, pages in the main view, and
+steps in PATTERN. Short START/SELECT actions happen on release.
+
+For reset, hold START+SELECT about a second, release both, choose a scope and
+press X; B cancels. Close file dialogs first. All sound controls resets and pauses.
+Effects-only keeps sources/motion/groove; effects + modulation resets those motion
+controls while preserving base synthesis. MENU always exits.
+
+For a snapshot, hold SELECT first, then tap A or B, and release. Source loading
+invalidates the snapshot; exit loses it. Colors are saved separately: TOOLS →
+COLORS, A saves, B/X cancels. App icon appearance may need leaving/re-entering Apps.
+
+## Export and connection questions
+
+Export is a fresh render, not live recording. It pauses playback and includes the
+complete source/effects/master settings. Existing tails and button gestures are
+not captured. B cancels unfinished work; completed files remain in `state/exports`.
+For clipping, lower gain or enable limiting and export again. Copy important files
+before moving aside any incomplete export after an SD/power error.
+
+Stock Miyoo Mini Plus has no Bluetooth. GrainMM has no MIDI, USB audio/MIDI,
+network music sync or live audio input. Wi-Fi file transfer is separate from
+musical connectivity. External hardware modifications are outside tested scope.
+
+## Report a problem
+
+Use [Issues](https://github.com/lkotlarenko/GrainMM/issues). Include the GrainMM
+version, handheld model, OnionOS version, steps to reproduce, whether you used a
+WAV or built-in source, and the relevant error from the two session logs. Remove
+personal filenames, addresses and credentials first. Mention whether it happened
+on the speaker or headphones. Do not include copyrighted samples without rights.
+
+For engineering diagnostics: [build](BUILDING.md), [testing](TESTING.md),
+[hardware](development/MIYOO_HARDWARE.md). Callback lateness is a scheduling hint;
+the current SDL adapter exposes no hardware XRUN counter. Keep Onion's normal
+audio preload enabled. Sanitizer leak checks need execution outside ptrace.

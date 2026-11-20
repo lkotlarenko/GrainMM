@@ -1,0 +1,17 @@
+GrainMM — created and maintained by elly (@lkotlarenko)
+Design, native implementation and Miyoo Mini Plus adaptation
+https://github.com/lkotlarenko/GrainMM
+
+Original GrainBrick by ETRNLIAM
+https://github.com/ETRNLIAM/GrainBrick
+
+Ported with the original author's permission and attribution.
+The native GrainMM implementation is newly authored and uses scoped GPLv3 terms.
+Original GrainBrick and third-party components retain their own terms.
+This package includes no GrainBrick DSP binaries, samples, fonts or presets.
+Device-provided SDL 1.2 and system runtime libraries are dynamically used;
+no shared libraries are redistributed in this package.
+
+PocketTracker by conanizer and contributors: credits organization and handheld
+effect-lifecycle research. No PocketTracker code or assets are included.
+https://github.com/conanizer/pockettracker
